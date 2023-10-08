@@ -7,17 +7,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './commons/header/header.component';
 import { FooterComponent } from './commons/footer/footer.component';
+import { AddRecetteComponent } from './recette/add-recette/add-recette.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddIngredientComponent } from './ingredient/add-ingredient/add-ingredient.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AddRecetteComponent,
+    AddIngredientComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
