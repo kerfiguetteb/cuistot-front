@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { IngredientService } from 'src/app/service/ingredient.service';
 
@@ -11,6 +11,7 @@ export class AddIngredientComponent {
 
   constructor( private formBuilder: FormBuilder, private ingredientService: IngredientService ){ }
 
+  @Input()
   ingredients!: any[]
 
   ingredientForm: FormGroup = this.formBuilder.group({
@@ -20,8 +21,8 @@ export class AddIngredientComponent {
   submitted: boolean = false;
 
   private addIngredient(): void {
-    this.ingredientService.createIngredient(this.ingredientForm.value);
-    this.ingredients.push(this.ingredientForm.value);
+    this.ingredientService.createIngredient(this.ingredientForm.value).subscribe();
+    this.ingredients.push(this.ingredientForm.value);    
     this.ingredientForm.reset();
     this.submitted = false;
   }

@@ -1,0 +1,14 @@
+<app-add-ingredient [ingredients]="ingredients"></app-add-ingredient>
+
+<div class="container">
+    <hr>
+    <h3>les ingredients</h3>
+    <div class="row d-flex justify-content-center">
+        <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 10rem;">
+            <img src="../../assets/img/logo.png" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{ingredient.nom}}</h5>
+            </div>
+          </div>
+    </div>
+</div>
