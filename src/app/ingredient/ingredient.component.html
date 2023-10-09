@@ -4,11 +4,13 @@
     <hr>
     <h3>les ingredients</h3>
     <div class="row d-flex justify-content-center">
-        <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 10rem;">
+        <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 13rem;">
+          <div class="text-end">
+            <button type="button" (click)="onRemove(ingredient)" class="btn-close mt-3"></button>
+          </div>
             <img src="../../assets/img/logo.png" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{ingredient.nom}}</h5>
             </div>
-          </div>
     </div>
 </div>

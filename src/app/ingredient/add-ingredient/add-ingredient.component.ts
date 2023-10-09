@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Ingredient from 'src/app/models/ingredient.model';
 import { IngredientService } from 'src/app/service/ingredient.service';
 
 @Component({
@@ -21,8 +22,10 @@ export class AddIngredientComponent {
   submitted: boolean = false;
 
   private addIngredient(): void {
-    this.ingredientService.createIngredient(this.ingredientForm.value).subscribe();
-    this.ingredients.push(this.ingredientForm.value);    
+    this.ingredientService.createIngredient(this.ingredientForm.value).subscribe((ingredient) =>{
+      this.ingredients.push(ingredient); 
+    });
+
     this.ingredientForm.reset();
     this.submitted = false;
   }
@@ -37,7 +40,5 @@ export class AddIngredientComponent {
   public get form(){
     return this.ingredientForm.controls
   }
-
-
 
 }

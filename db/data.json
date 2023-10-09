@@ -5,40 +5,16 @@
       "id": 1
     },
     {
-      "nom": "farine",
+      "nom": "sel",
       "id": 2
     },
     {
-      "nom": "dfd",
+      "nom": "farine",
       "id": 3
     },
     {
-      "nom": "sucre",
-      "id": 4
-    },
-    {
       "nom": "sel",
-      "id": 5
-    },
-    {
-      "nom": "test",
-      "id": 6
-    },
-    {
-      "nom": "vdvdv",
-      "id": 7
-    },
-    {
-      "nom": "dbdv",
-      "id": 8
-    },
-    {
-      "nom": "dbvdvbd",
-      "id": 9
-    },
-    {
-      "nom": "dvdvd",
-      "id": 10
+      "id": 4
     }
   ]
 }

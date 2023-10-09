@@ -1,2 +1,26 @@
+html{
+    
+    height: 100%; 
 
+}
+body {
+     margin: 0;   
+     font-family: Hind Madurai; 
+    }
+
+h1{
+    font-family: Montserrat;
+}
+
+h2 h3 h4 h5 h6 {
+    font-family: Lora;
+}
+
+/* styles.css */
+
+/* Importation des styles Bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Importation des styles Bootstrap Icons */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
 
