@@ -10,6 +10,8 @@ import { AddRecetteComponent } from './recette/add-recette/add-recette.component
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddIngredientComponent } from './ingredient/add-ingredient/add-ingredient.component';
 import { IngredientComponent } from './ingredient/ingredient.component';
+import { UstensileComponent } from './ustensile/ustensile.component';
+import { AddUstensileComponent } from './ustensile/add-ustensile/add-ustensile.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { IngredientComponent } from './ingredient/ingredient.component';
     FooterComponent,
     AddRecetteComponent,
     AddIngredientComponent,
-    IngredientComponent
+    IngredientComponent,
+    UstensileComponent,
+    AddUstensileComponent
   ],
 
   imports: [

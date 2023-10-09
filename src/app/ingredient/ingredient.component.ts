@@ -12,10 +12,10 @@ export class IngredientComponent implements OnInit {
 
   constructor(private ingredientService: IngredientService) {}
 
-  ingredients!: any[]
+  ingredients!: Ingredient[]
 
   onRemove(ingredient: Ingredient){
-    
+    // filtrage des ingredients
     const ingredientFilter = this.ingredients.filter((object => object.id !== ingredient.id))
     this.ingredients = ingredientFilter
     this.ingredientService.deleteIngredient(ingredient.id).subscribe()
@@ -25,7 +25,6 @@ export class IngredientComponent implements OnInit {
   ngOnInit(): void {
     this.ingredientService.getIngredients().subscribe((ingredients) => {
       this.ingredients = ingredients
-      
     })
   }
 

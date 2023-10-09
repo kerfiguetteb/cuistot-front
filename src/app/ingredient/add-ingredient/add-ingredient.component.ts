@@ -13,7 +13,7 @@ export class AddIngredientComponent {
   constructor( private formBuilder: FormBuilder, private ingredientService: IngredientService ){ }
 
   @Input()
-  ingredients!: any[]
+  ingredients!: Ingredient[]
 
   ingredientForm: FormGroup = this.formBuilder.group({
     nom: ['', Validators.required]
@@ -22,7 +22,7 @@ export class AddIngredientComponent {
   submitted: boolean = false;
 
   private addIngredient(): void {
-    this.ingredientService.createIngredient(this.ingredientForm.value).subscribe((ingredient) =>{
+    this.ingredientService.createIngredient(this.ingredientForm.value).subscribe((ingredient) => {
       this.ingredients.push(ingredient); 
     });
 
