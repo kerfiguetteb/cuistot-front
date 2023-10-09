@@ -12,6 +12,8 @@ import { AddIngredientComponent } from './ingredient/add-ingredient/add-ingredie
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { UstensileComponent } from './ustensile/ustensile.component';
 import { AddUstensileComponent } from './ustensile/add-ustensile/add-ustensile.component';
+import { RecetteComponent } from './recette/recette.component';
+import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AddUstensileComponent } from './ustensile/add-ustensile/add-ustensile.c
     AddIngredientComponent,
     IngredientComponent,
     UstensileComponent,
-    AddUstensileComponent
+    AddUstensileComponent,
+    RecetteComponent,
+    ShowRecetteComponent
   ],
 
   imports: [

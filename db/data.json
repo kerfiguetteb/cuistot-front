@@ -3,26 +3,6 @@
     {
       "nom": "four",
       "id": 1
-    },
-    {
-      "nom": "poêle",
-      "id": 2
-    },
-    {
-      "nom": "robot",
-      "id": 4
-    },
-    {
-      "nom": "test",
-      "id": 5
-    },
-    {
-      "nom": "gtbt",
-      "id": 6
-    },
-    {
-      "nom": "nhghn",
-      "id": 7
     }
   ],
   "ingredients": [
@@ -38,5 +18,6 @@
       "nom": "sucre",
       "id": 3
     }
-  ]
+  ],
+  "recettes": []
 }
