@@ -1,1 +1,29 @@
-<p>show-recette works!</p>
+<div class="container mt-5">
+
+    <h1>{{recette.nom}}</h1>
+
+    <div role="tabpanel">
+        <ul class=" nav justify-content-center" id="myList" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="list" href="#ingredient" role="tab">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="list" href="#ustensile" role="tab">Ustensile</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane" id="ingredient" role="tabpanel">
+            <div>
+                <p>Ingredient</p>
+
+            </div>
+          </div>
+          <div class="tab-pane" id="ustensile" role="tabpanel">
+            <div>
+                <p>Ustensile</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</div>    

@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { IngredientComponent } from './ingredient/ingredient.component';
 import { UstensileComponent } from './ustensile/ustensile.component';
 import { RecetteComponent } from './recette/recette.component';
+import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 
 const routes: Routes = [
 
   {path: 'ingredients', component: IngredientComponent},
   {path: 'ustensiles', component: UstensileComponent},
-  {path: 'recettes', component: RecetteComponent}
+  {path: 'recettes', component: RecetteComponent},
+  {path: 'show/:type', component: ShowRecetteComponent},
+  {path: 'show/:type/:id', component: ShowRecetteComponent}
 ];
 
 @NgModule({
