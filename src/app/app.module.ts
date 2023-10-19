@@ -16,6 +16,9 @@ import { RecetteComponent } from './recette/recette.component';
 import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 import { UstensilesRecetteComponent } from './recette/show-recette/ustensiles-recette/ustensiles-recette.component';
 import { IngredientsRecetteComponent } from './recette/show-recette/ingredients-recette/ingredients-recette.component';
+import { ListIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/list-ingredient-recette/list-ingredient-recette.component';
+import { CardIngredientComponent } from './recette/show-recette/ingredients-recette/card-ingredient/card-ingredient.component';
+import { AddIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/add-ingredient-recette/add-ingredient-recette.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { IngredientsRecetteComponent } from './recette/show-recette/ingredients-
     RecetteComponent,
     ShowRecetteComponent,
     UstensilesRecetteComponent,
-    IngredientsRecetteComponent
+    IngredientsRecetteComponent,
+    ListIngredientRecetteComponent,
+    CardIngredientComponent,
+    AddIngredientRecetteComponent,
   ],
 
   imports: [

@@ -1,8 +1,19 @@
 <div class="container mt-5">
 
     <h1>{{recette.nom}}</h1>
+    <div>
+        <app-list-ingredient-recette [ingredients]="recette.ingredients"></app-list-ingredient-recette>
+    </div>
 
-    <div role="tabpanel">
+
+    <div class="text-end">
+        <span class="span-custom">Pour personnalisé la recette cliquée ici </span><button (click)="toggle()"
+            class=" btn-custom">+ </button>
+
+    </div>
+
+
+    <div *ngIf="!hidden" role="tabpanel">
         <ul class=" nav justify-content-center" id="myList" role="tablist">
             <li class="nav-item">
                 <a class="nav-link " data-bs-toggle="list" href="#ingredient" role="tab">Ingredients</a>
@@ -12,18 +23,15 @@
             </li>
         </ul>
         <div class="tab-content">
-          <div class="tab-pane" id="ingredient" role="tabpanel">
-            <div>
-                <p>Ingredient</p>
-
+            <div class="tab-pane" id="ingredient" role="tabpanel">
+                <div>
+                        <app-add-ingredient-recette [ingredients]="ingredients" [recette]="recette"></app-add-ingredient-recette>
+                </div>
             </div>
-          </div>
-          <div class="tab-pane" id="ustensile" role="tabpanel">
-            <div>
-                <p>Ustensile</p>
+            <div class="tab-pane" id="ustensile" role="tabpanel">
+                <div>
+                    <app-add-ustensile></app-add-ustensile>
+                </div>
             </div>
-          </div>
         </div>
     </div>
-
-</div>    

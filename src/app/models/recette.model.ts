@@ -10,5 +10,8 @@ export default class Recette {
     quantites!: IngredientQuantite[]; 
     ustensiles!: Ustensile[];
     img!: string
+    prepartion!: number
+    cuisson!: number
+    repos!: number
 
 }

@@ -3,6 +3,10 @@
     {
       "nom": "four",
       "id": 1
+    },
+    {
+      "nom": "poêle",
+      "id": 2
     }
   ],
   "ingredients": [
@@ -17,6 +21,14 @@
     {
       "nom": "sucre",
       "id": 3
+    },
+    {
+      "nom": "sucre de roux",
+      "id": 4
+    },
+    {
+      "nom": "test ajout ingredient sur recette",
+      "id": 5
     }
   ],
   "recettes": [
