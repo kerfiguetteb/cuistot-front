@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { UstensileService } from 'src/app/service/ustensile.service';
+import Recette from 'src/app/models/recette.model';
 
 @Component({
   selector: 'app-ustensiles-recette',
@@ -8,9 +8,10 @@ import { UstensileService } from 'src/app/service/ustensile.service';
 })
 export class UstensilesRecetteComponent {
 
-  constructor( private ustensileService: UstensileService ){}
-
   @Input()
   ustensiles!: []
+
+  @Input()
+  recette!: Recette
 
 }

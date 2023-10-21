@@ -27,14 +27,49 @@
       "id": 4
     },
     {
-      "nom": "test ajout ingredient sur recette",
+      "nom": "levure",
       "id": 5
     }
   ],
   "recettes": [
     {
       "nom": "Tropezienne",
-      "id": 1
+      "id": 1,
+      "quantites": [
+        {
+          "quantite": 5,
+          "nomIngredient": "sel"
+        },
+        {
+          "quantite": 5,
+          "nomIngredient": "farine"
+        },
+        {
+          "quantite": 500,
+          "nomIngredient": "sucre"
+        },
+        {
+          "quantite": 56,
+          "nomIngredient": "levure"
+        }
+      ],
+      "ingredients": [
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sucre",
+          "id": 3
+        },
+        {
+          "nom": "levure"
+        }
+      ]
     }
   ]
 }

@@ -15,6 +15,9 @@ export class AddIngredientComponent {
   @Input()
   ingredients!: Ingredient[]
 
+  @Output()
+  onIngredient: EventEmitter<Ingredient> = new EventEmitter()
+
   ingredientForm: FormGroup = this.formBuilder.group({
     nom: ['', Validators.required]
   })
@@ -24,7 +27,9 @@ export class AddIngredientComponent {
   private addIngredient(): void {
     this.ingredientService.createIngredient(this.ingredientForm.value).subscribe((ingredient) => {
       this.ingredients.push(ingredient); 
+      
     });
+    this.onIngredient.emit(this.ingredientForm.value)
 
     this.ingredientForm.reset();
     this.submitted = false;

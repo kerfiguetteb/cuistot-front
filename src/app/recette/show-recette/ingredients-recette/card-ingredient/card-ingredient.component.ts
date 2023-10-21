@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
+import Recette from 'src/app/models/recette.model';
 
 @Component({
   selector: 'app-card-ingredient',
@@ -9,6 +10,6 @@ import Ingredient from 'src/app/models/ingredient.model';
 export class CardIngredientComponent {
 
   @Input()
-  ingredients!: Ingredient[]
+  recette!: Recette
 
 }

@@ -2,18 +2,25 @@
 <button (click)="toggle()" type="button" class="btn btn-light">+ ajouter un ingredient</button>
 
 <div *ngIf="!hidden">
-    <app-add-ingredient></app-add-ingredient>
+    <app-add-ingredient (onIngredient)="updateIngredient($event)"></app-add-ingredient>
 </div>
 
 
 <div class="row d-flex justify-content-center">
-    <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 13rem;">
-      <div class="text-end">
+    <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 18rem;">
+      <!-- <div class="text-end">
         <button type="button" (click)="addIngredient(ingredient)" class="btn-close mt-3"></button>
-      </div>
+      </div> -->
       <img src="../../assets/img/logo.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">{{ingredient.nom}}</h5>
+        <form [formGroup]="quantiteForm" (ngSubmit)="onSubmit(ingredient)">
+          <div class="input-group">
+            <input type="number" class="form-control" id="quantite" formControlName="quantite">
+            <span class="input-group-text">g</span>
+          </div>
+          <button class="btn btn-info mt-3" type="submit">ajouter ingredients</button> 
+        </form>
       </div>
     </div>
   </div>

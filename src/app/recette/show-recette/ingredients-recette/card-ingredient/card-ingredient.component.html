@@ -1,4 +1,4 @@
-<div *ngIf="ingredients" class="card col-md-6">
+<div *ngIf="recette.ingredients" class="card col-md-6">
     <div class="card-body">
         <table class="table">
             <thead>
@@ -10,10 +10,10 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
+              <tr *ngFor="let ingredient of recette.quantites">
                 <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
+                <td>{{ingredient.quantite}} gramme</td>
+                <td>{{ingredient.nomIngredient}}</td>
                 <td><button><i class="bi bi-trash3-fill text-danger"></i></button></td>
               </tr>
             </tbody>
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-<div *ngIf="!ingredients">
+<div *ngIf="!recette.ingredients">
     <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Veuillez personnaliser votre recette</strong> 
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
