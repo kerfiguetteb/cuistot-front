@@ -15,7 +15,7 @@ import { UstensileService } from 'src/app/service/ustensile.service';
 export class ShowRecetteComponent implements OnInit {
 
   recette!: Recette;
-  ingredients!: Ingredient[];
+  ingredients: Ingredient[] = [];
   ustensiles!: Ustensile[];
   
   hidden: boolean = true
@@ -44,6 +44,23 @@ export class ShowRecetteComponent implements OnInit {
       this.router.navigate(['/recettes'])
     }
   }
+
+
+   public getIngredientFilter(){
+    this.ingredientService.getIngredients().subscribe((ingredient) => {
+      this.ingredients = ingredient
+
+      this.recette.quantites.forEach((element) => {
+
+        const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== element.ingredient.id))
+        this.ingredients = ingredientFilter
+        console.log(this.ingredients);
+        
+      })
+    });  
+  } 
+ 
+ 
   
   ngOnInit(): void {
     const type = this.route.snapshot.paramMap.get('type');
@@ -52,11 +69,9 @@ export class ShowRecetteComponent implements OnInit {
 
     this.ustensileService.getUstensiles().subscribe((ustensile) => {
       this.ustensiles = ustensile
-    })
+    })  
 
-    this.ingredientService.getIngredients().subscribe((ingredient) => {
-      this.ingredients = ingredient
-    })
+    this.getIngredientFilter()
   }
 
 }

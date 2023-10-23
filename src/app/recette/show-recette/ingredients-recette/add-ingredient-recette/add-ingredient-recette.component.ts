@@ -24,6 +24,7 @@ export class AddIngredientRecetteComponent {
 
   ingredientQuantite!: IngredientQuantite
 
+
   @Input()
   recette!: Recette
 
@@ -39,25 +40,16 @@ export class AddIngredientRecetteComponent {
   }
 
   private addQuantite(ingredient: Ingredient){
-
-    
     this.ingredientQuantite = this.quantiteForm.value
     this.ingredientQuantite.nomIngredient = ingredient.nom
-    // console.log(this.ingredientQuantite.quantite );
-    
+    this.ingredientQuantite.ingredient = ingredient
 
-    // this.ingredientQuantite.nomIngredient = ingredient.nom
-    this.recette.quantites.push(this.ingredientQuantite)
-    this.recette.ingredients.push(ingredient)
-    // on enregistre le nouvelle ingredient dans la recette
-
-
-    this.recetteService.updateRecette(this.recette).subscribe((recette) => {
-      console.log(recette);
-      
-    })
-
-
+      this.ingredientQuantiteService.createIngredientQuantite(this.ingredientQuantite).subscribe((quantite) => {
+        this.recette.quantites.push(quantite)
+        this.recette.ingredients.push(ingredient)
+        this.recetteService.updateRecette(this.recette).subscribe((recette) => {      
+        })
+      });
   }
 
   public onSubmit(ingredient: Ingredient): void{
@@ -68,8 +60,6 @@ export class AddIngredientRecetteComponent {
 
   addIngredient(ingredient: Ingredient){
     this.recette.ingredients.push(ingredient)
-
-    console.log(this.recette);
     
   }
   updateIngredient(element: Ingredient){

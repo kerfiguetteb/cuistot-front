@@ -9,6 +9,120 @@
       "id": 2
     }
   ],
+  "ingredientQuantites": [
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "id": 1
+    },
+    {
+      "quantite": 200,
+      "nomIngredient": "sel",
+      "id": 2
+    },
+    {
+      "quantite": 100,
+      "nomIngredient": "sucre",
+      "id": 3
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "levure",
+      "id": 4
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sel",
+      "id": 5
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sel",
+      "id": 6
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sel",
+      "id": 7
+    },
+    {
+      "quantite": 100,
+      "nomIngredient": "sel",
+      "id": 8
+    },
+    {
+      "quantite": 100,
+      "nomIngredient": "sel",
+      "id": 9
+    },
+    {
+      "quantite": 100,
+      "nomIngredient": "sel",
+      "id": 10
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "id": 11
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "farine",
+      "id": 12
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "sucre",
+      "id": 13
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sucre",
+      "id": 14
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "id": 15
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "sel",
+      "id": 16
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "id": 17
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "ingredient": {
+        "nom": "farine",
+        "id": 1
+      },
+      "id": 18
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "sel",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 19
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "farine",
+      "ingredient": {
+        "nom": "farine",
+        "id": 1
+      },
+      "id": 20
+    }
+  ],
   "ingredients": [
     {
       "nom": "farine",
@@ -23,10 +137,6 @@
       "id": 3
     },
     {
-      "nom": "sucre de roux",
-      "id": 4
-    },
-    {
       "nom": "levure",
       "id": 5
     }
@@ -37,20 +147,22 @@
       "id": 1,
       "quantites": [
         {
-          "quantite": 5,
-          "nomIngredient": "sel"
+          "quantite": 150,
+          "nomIngredient": "farine",
+          "ingredient": {
+            "nom": "farine",
+            "id": 1
+          },
+          "id": 18
         },
         {
-          "quantite": 5,
-          "nomIngredient": "farine"
-        },
-        {
-          "quantite": 500,
-          "nomIngredient": "sucre"
-        },
-        {
-          "quantite": 56,
-          "nomIngredient": "levure"
+          "quantite": 50,
+          "nomIngredient": "farine",
+          "ingredient": {
+            "nom": "farine",
+            "id": 1
+          },
+          "id": 20
         }
       ],
       "ingredients": [
@@ -68,6 +180,102 @@
         },
         {
           "nom": "levure"
+        },
+        {
+          "nom": "sucre",
+          "id": 3
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "sucre",
+          "id": 3
+        },
+        {
+          "nom": "levure",
+          "id": 5
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sucre",
+          "id": 3
+        },
+        {
+          "nom": "sucre",
+          "id": 3
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "farine",
+          "id": 1
+        },
+        {
+          "nom": "sel",
+          "id": 2
+        },
+        {
+          "nom": "farine",
+          "id": 1
         }
       ]
     }

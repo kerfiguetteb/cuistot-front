@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
+import IngredientQuantite from 'src/app/models/ingredientQuantite.model';
 import Recette from 'src/app/models/recette.model';
+import { RecetteService } from 'src/app/service/recette.service';
 
 @Component({
   selector: 'app-card-ingredient',
@@ -9,7 +11,20 @@ import Recette from 'src/app/models/recette.model';
 })
 export class CardIngredientComponent {
 
+  constructor(private recetteService: RecetteService){}
+
   @Input()
   recette!: Recette
+
+  remove(ingredient: IngredientQuantite){
+    const ingredientFilter = this.recette.quantites.filter((object => object.id !== ingredient.id))
+    this.recette.quantites = ingredientFilter
+    console.log(this.recette.quantites);
+    console.log(ingredientFilter);
+    
+    this.recetteService.updateRecette(this.recette).subscribe()
+  }
+
+
 
 }

@@ -10,11 +10,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let ingredient of recette.quantites">
-                <th scope="row">1</th>
-                <td>{{ingredient.quantite}} gramme</td>
+              <tr *ngFor="let ingredient of recette.quantites; let i = index ">
+                <th scope="row">{{i + 1}} </th>
+                <td>{{ingredient.quantite}} grammes</td>
                 <td>{{ingredient.nomIngredient}}</td>
-                <td><button><i class="bi bi-trash3-fill text-danger"></i></button></td>
+                <td><button (click)="remove(ingredient)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
               </tr>
             </tbody>
           </table>
