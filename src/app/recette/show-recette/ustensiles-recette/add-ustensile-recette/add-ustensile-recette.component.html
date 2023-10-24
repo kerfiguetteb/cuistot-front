@@ -1,0 +1,15 @@
+<button (click)="toggle()" type="button" class="btn btn-light">+ ajouter un ingredient</button>
+
+<div *ngIf="!hidden">
+    <app-add-ustensile (onUstensile)="updateRecette($event)"></app-add-ustensile>
+</div>
+
+<div class="row d-flex justify-content-center">
+    <div *ngFor="let ustensile of ustensiles"  class="card m-1 col-md-3" style="width: 18rem;">
+      <img src="../../assets/img/logo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{ustensile.nom}}</h5>
+        <button (click)="addUstensile(ustensile)" class="btn btn-info mt-3" type="submit">ajouter ustensile</button> 
+      </div>
+    </div>
+  </div>

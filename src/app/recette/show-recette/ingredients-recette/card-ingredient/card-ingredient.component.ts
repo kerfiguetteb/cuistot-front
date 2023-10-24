@@ -16,12 +16,11 @@ export class CardIngredientComponent {
   @Input()
   recette!: Recette
 
-  remove(ingredient: IngredientQuantite){
+  // cette fonction filtre
+ public remove(ingredient: IngredientQuantite) : void
+ {
     const ingredientFilter = this.recette.quantites.filter((object => object.id !== ingredient.id))
     this.recette.quantites = ingredientFilter
-    console.log(this.recette.quantites);
-    console.log(ingredientFilter);
-    
     this.recetteService.updateRecette(this.recette).subscribe()
   }
 

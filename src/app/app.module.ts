@@ -19,6 +19,7 @@ import { IngredientsRecetteComponent } from './recette/show-recette/ingredients-
 import { ListIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/list-ingredient-recette/list-ingredient-recette.component';
 import { CardIngredientComponent } from './recette/show-recette/ingredients-recette/card-ingredient/card-ingredient.component';
 import { AddIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/add-ingredient-recette/add-ingredient-recette.component';
+import { AddUstensileRecetteComponent } from './recette/show-recette/ustensiles-recette/add-ustensile-recette/add-ustensile-recette.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AddIngredientRecetteComponent } from './recette/show-recette/ingredient
     ListIngredientRecetteComponent,
     CardIngredientComponent,
     AddIngredientRecetteComponent,
+    AddUstensileRecetteComponent,
   ],
 
   imports: [

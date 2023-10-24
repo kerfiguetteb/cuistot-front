@@ -55,6 +55,7 @@ export class AddIngredientRecetteComponent {
   public onSubmit(ingredient: Ingredient): void{
     if (this.quantiteForm.valid) {
       this.addQuantite(ingredient)
+      this.remove(ingredient)
     }
   }
 
@@ -62,9 +63,19 @@ export class AddIngredientRecetteComponent {
     this.recette.ingredients.push(ingredient)
     
   }
+  
   updateIngredient(element: Ingredient){
     this.ingredients.push(element)    
   }
+
+  remove(ingredient: Ingredient){
+      const ingredientFilter = this.ingredients.filter((object => object.id !== ingredient.id))
+      this.ingredients = ingredientFilter
+      console.log(this.ingredients);
+      
+  
+  }
+
 
   public get form(){
     return this.quantiteForm.controls

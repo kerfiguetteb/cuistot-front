@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Ustensile from 'src/app/models/ustensile.model';
 import { UstensileService } from 'src/app/service/ustensile.service';
@@ -15,6 +15,11 @@ export class AddUstensileComponent {
   @Input()
   ustensiles!: Ustensile[]
 
+  @Output()
+  onUstensile: EventEmitter<Ustensile> = new EventEmitter()
+
+
+
   ustensileForm : FormGroup = this.formBuilder.group({
     nom: ['', Validators.required]
   })
@@ -24,11 +29,14 @@ export class AddUstensileComponent {
   private addUstensile(): void {
     this.ustensileService.createUstensile(this.ustensileForm.value).subscribe((ustensile) => {
       this.ustensiles.push(ustensile); 
+      
     });
+    this.onUstensile.emit(this.ustensileForm.value)
 
     this.ustensileForm.reset();
     this.submitted = false;
   }
+
 
   public onSubmit(): void {
     this.submitted = true;

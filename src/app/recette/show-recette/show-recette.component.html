@@ -1,10 +1,15 @@
 <div class="container mt-5">
 
     <h1>{{recette.nom}}</h1>
-    <div>
-        <app-list-ingredient-recette [recette]="recette"></app-list-ingredient-recette>
-    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <app-list-ingredient-recette [recette]="recette"></app-list-ingredient-recette>
+        </div>
+        <div class="col-md-6">
+            <app-list-ingredient-recette [recette]="recette"></app-list-ingredient-recette>
+        </div>
 
+    </div>    
 
     <div class="text-end">
         <span class="span-custom">Pour personnalisé la recette cliquée ici </span><button (click)="toggle()"
@@ -30,7 +35,7 @@
             </div>
             <div class="tab-pane" id="ustensile" role="tabpanel">
                 <div>
-                    <app-add-ustensile></app-add-ustensile>
+                    <app-add-ustensile-recette [ustensiles]="ustensiles" [recette]="recette"></app-add-ustensile-recette>
                 </div>
             </div>
         </div>

@@ -45,7 +45,7 @@ export class ShowRecetteComponent implements OnInit {
     }
   }
 
-
+  // cette fonction filtres les ingredients en fonction des ingredients que possede la recette
    public getIngredientFilter(){
     this.ingredientService.getIngredients().subscribe((ingredient) => {
       this.ingredients = ingredient
