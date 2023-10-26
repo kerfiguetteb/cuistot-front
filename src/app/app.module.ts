@@ -16,10 +16,12 @@ import { RecetteComponent } from './recette/recette.component';
 import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 import { UstensilesRecetteComponent } from './recette/show-recette/ustensiles-recette/ustensiles-recette.component';
 import { IngredientsRecetteComponent } from './recette/show-recette/ingredients-recette/ingredients-recette.component';
-import { ListIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/list-ingredient-recette/list-ingredient-recette.component';
 import { CardIngredientComponent } from './recette/show-recette/ingredients-recette/card-ingredient/card-ingredient.component';
 import { AddIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/add-ingredient-recette/add-ingredient-recette.component';
 import { AddUstensileRecetteComponent } from './recette/show-recette/ustensiles-recette/add-ustensile-recette/add-ustensile-recette.component';
+import { CardUstensileComponent } from './recette/show-recette/ustensiles-recette/card-ustensile/card-ustensile.component';
+import { ListUstensileComponent } from './recette/show-recette/ustensiles-recette/list-ustensile/list-ustensile.component';
+import { ListIngredientComponent } from './recette/show-recette/ingredients-recette/list-ingredient/list-ingredient.component';
 
 @NgModule({
   declarations: [
@@ -35,10 +37,12 @@ import { AddUstensileRecetteComponent } from './recette/show-recette/ustensiles-
     ShowRecetteComponent,
     UstensilesRecetteComponent,
     IngredientsRecetteComponent,
-    ListIngredientRecetteComponent,
     CardIngredientComponent,
     AddIngredientRecetteComponent,
     AddUstensileRecetteComponent,
+    CardUstensileComponent,
+    ListUstensileComponent,
+    ListIngredientComponent,
   ],
 
   imports: [

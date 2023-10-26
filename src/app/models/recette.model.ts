@@ -6,9 +6,9 @@ export default class Recette {
     id!:number;
     nom!:string;
     description!:string;
-    ingredients!: Ingredient[];
-    quantites!: IngredientQuantite[]; 
-    ustensiles!: Ustensile[];
+    ingredients: Ingredient[] = [];
+    quantites: IngredientQuantite[] = []; 
+    ustensiles: Ustensile[] = [];
     img!: string
     prepartion!: number
     cuisson!: number

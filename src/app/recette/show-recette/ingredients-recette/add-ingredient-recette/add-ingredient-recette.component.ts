@@ -24,6 +24,8 @@ export class AddIngredientRecetteComponent {
 
   ingredientQuantite!: IngredientQuantite
 
+  quantite: IngredientQuantite[] = []
+
 
   @Input()
   recette!: Recette
@@ -45,8 +47,10 @@ export class AddIngredientRecetteComponent {
     this.ingredientQuantite.ingredient = ingredient
 
       this.ingredientQuantiteService.createIngredientQuantite(this.ingredientQuantite).subscribe((quantite) => {
-        this.recette.quantites.push(quantite)
-        this.recette.ingredients.push(ingredient)
+        this.quantite.push(quantite)
+        this.recette.quantites = this.quantite
+        this.recette.ingredients = this.ingredients
+
         this.recetteService.updateRecette(this.recette).subscribe((recette) => {      
         })
       });
@@ -70,9 +74,7 @@ export class AddIngredientRecetteComponent {
 
   remove(ingredient: Ingredient){
       const ingredientFilter = this.ingredients.filter((object => object.id !== ingredient.id))
-      this.ingredients = ingredientFilter
-      console.log(this.ingredients);
-      
+      this.ingredients = ingredientFilter      
   
   }
 

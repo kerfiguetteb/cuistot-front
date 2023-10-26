@@ -17,6 +17,8 @@ export class AddUstensileRecetteComponent {
   @Input()
   recette!: Recette
 
+  ustensile: Ustensile[] = []
+
   // @Output()
 
   constructor( private recetteService: RecetteService){}
@@ -30,19 +32,15 @@ export class AddUstensileRecetteComponent {
   }
 
   updateRecette(element: Ustensile){
-    this.ustensiles.push(element) 
-    console.log(this.ustensiles);
-       
+    this.ustensile.push(element) 
   }
 
   addUstensile(ustensile: Ustensile){
 
     this.remove(ustensile)
-    this.recette.ustensiles.push(ustensile)
+    this.updateRecette(ustensile)
+    this.recette.ustensiles = this.ustensile
     this.recetteService.updateRecette(this.recette).subscribe()    
-    // this.recette.ustensiles.push(ustensile)
-
-
   }
 
   remove(ustensile: Ustensile){
