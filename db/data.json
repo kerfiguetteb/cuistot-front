@@ -351,6 +351,42 @@
         "id": 1
       },
       "id": 46
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sel",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 47
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "farine",
+      "ingredient": {
+        "nom": "farine",
+        "id": 1
+      },
+      "id": 48
+    },
+    {
+      "quantite": 150,
+      "nomIngredient": "sel",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 49
+    },
+    {
+      "quantite": 50,
+      "nomIngredient": "sucre",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 3
+      },
+      "id": 50
     }
   ],
   "ingredients": [
@@ -414,8 +450,8 @@
       ],
       "ingredients": [
         {
-          "nom": "sel",
-          "id": 2
+          "nom": "poivre",
+          "id": 4
         }
       ],
       "quantites": [
@@ -426,15 +462,16 @@
             "nom": "farine",
             "id": 1
           },
-          "id": 41
+          "id": 48
         },
         {
-          "quantite": 25,
-          "nomIngredient": "sucre",
+          "quantite": 150,
+          "nomIngredient": "sel",
           "ingredient": {
-            "nom": "sucre"
+            "nom": "sel",
+            "id": 2
           },
-          "id": 42
+          "id": 49
         }
       ]
     }

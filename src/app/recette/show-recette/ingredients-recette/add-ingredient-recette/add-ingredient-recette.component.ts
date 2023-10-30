@@ -24,7 +24,7 @@ export class AddIngredientRecetteComponent {
 
   ingredientQuantite!: IngredientQuantite
 
-  quantite: IngredientQuantite[] = []
+  quantite!: IngredientQuantite
 
 
   @Input()
@@ -47,8 +47,8 @@ export class AddIngredientRecetteComponent {
     this.ingredientQuantite.ingredient = ingredient
 
       this.ingredientQuantiteService.createIngredientQuantite(this.ingredientQuantite).subscribe((quantite) => {
-        this.quantite.push(quantite)
-        this.recette.quantites = this.quantite
+        this.quantite = quantite
+        this.recette.quantites.push(this.quantite)
         this.recette.ingredients = this.ingredients
 
         this.recetteService.updateRecette(this.recette).subscribe((recette) => {      
