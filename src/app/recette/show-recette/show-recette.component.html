@@ -1,0 +1,43 @@
+<div *ngIf="recette" class="container mt-5">
+
+    <h1>{{recette.nom}}</h1>
+    <div class="row">
+        <div class="col-md-6">
+            <app-table [detail]="'ingredientsQuantite'" [objects]="recette" (onObjects)="remove($event)"></app-table>
+        </div>
+        <div class="col-md-6">
+            <app-table [detail]="'ustensiles'" [objects]="recette" (onObjects)="remove($event)"></app-table>
+        </div>
+
+    </div>    
+
+    <div class="text-end">
+        <span class="span-custom">Pour personnalisé la recette cliquée ici </span><button (click)="toggle()"
+            class=" btn-custom">+ </button>
+    </div>
+
+
+    <div *ngIf="!hidden" role="tabpanel">
+        <ul class=" nav justify-content-center" id="myList" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="list" href="#ingredient" role="tab">Ingredients</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="list" href="#ustensile" role="tab">Ustensile</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane" id="ingredient" role="tabpanel">
+                <div>
+                    <app-add-ingredient></app-add-ingredient>
+                    <app-ingredients [ingredients]="ingredients"></app-ingredients>
+                </div>
+            </div>
+            <div class="tab-pane" id="ustensile" role="tabpanel">
+                <div>
+                    <app-add-ustensile></app-add-ustensile>
+                    <app-ustensiles [recette]="recette"></app-ustensiles>
+                </div>
+            </div>
+        </div>
+    </div>

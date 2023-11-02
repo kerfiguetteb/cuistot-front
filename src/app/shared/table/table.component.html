@@ -1,0 +1,50 @@
+  <!-- tableau ingredients-recette -->
+
+<div *ngIf="objects.ingredients && detail === 'ingredientsQuantite'" class="card">
+  <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">quantiter</th>
+              <th scope="col">nom</th>
+              <th scope="col">action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ingredient of objects.quantites; let i = index ">
+              <th scope="row">{{i + 1}} </th>
+              <td>{{ingredient.quantite}} grammes</td>
+              <td> id : {{ingredient.ingredient.id}}</td>
+              <td>{{ingredient.nomIngredient}}</td>
+              <td><button (click)="event(ingredient)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
+
+
+  <!-- tableau ustensile -->
+
+<div *ngIf="objects.ustensiles && detail === 'ustensiles'" class="card">
+
+  <div class="card-body">
+      <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">nom</th>
+              <th scope="col">action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let ustensile of objects.ustensiles let i = index ">
+              <th scope="row">{{i + 1}} </th>
+              <td>{{ustensile.nom}}</td>
+              <td><button (click)="event(ustensile)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>

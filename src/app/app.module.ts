@@ -10,6 +10,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RecetteComponent } from './recette/recette.component';
 import { AddRecetteComponent } from './recette/add-recette/add-recette.component';
 import { CardComponent } from './shared/card/card.component';
+import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
+import { TableComponent } from './shared/table/table.component';
+import { IngredientsComponent } from './recette/show-recette/ingredients/ingredients.component';
+import { UstensilesComponent } from './recette/show-recette/ustensiles/ustensiles.component';
+import { AddUstensileComponent } from './recette/show-recette/add-ustensile/add-ustensile.component';
+import { AddIngredientComponent } from './recette/show-recette/add-ingredient/add-ingredient.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +24,13 @@ import { CardComponent } from './shared/card/card.component';
     FooterComponent,
     RecetteComponent,
     AddRecetteComponent,
-    CardComponent
+    CardComponent,
+    ShowRecetteComponent,
+    TableComponent,
+    IngredientsComponent,
+    UstensilesComponent,
+    AddUstensileComponent,
+    AddIngredientComponent
   ],
 
   imports: [
