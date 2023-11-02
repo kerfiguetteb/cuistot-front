@@ -6,43 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './commons/header/header.component';
 import { FooterComponent } from './commons/footer/footer.component';
-import { AddRecetteComponent } from './recette/add-recette/add-recette.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AddIngredientComponent } from './ingredient/add-ingredient/add-ingredient.component';
-import { IngredientComponent } from './ingredient/ingredient.component';
-import { UstensileComponent } from './ustensile/ustensile.component';
-import { AddUstensileComponent } from './ustensile/add-ustensile/add-ustensile.component';
 import { RecetteComponent } from './recette/recette.component';
-import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
-import { UstensilesRecetteComponent } from './recette/show-recette/ustensiles-recette/ustensiles-recette.component';
-import { IngredientsRecetteComponent } from './recette/show-recette/ingredients-recette/ingredients-recette.component';
-import { CardIngredientComponent } from './recette/show-recette/ingredients-recette/card-ingredient/card-ingredient.component';
-import { AddIngredientRecetteComponent } from './recette/show-recette/ingredients-recette/add-ingredient-recette/add-ingredient-recette.component';
-import { AddUstensileRecetteComponent } from './recette/show-recette/ustensiles-recette/add-ustensile-recette/add-ustensile-recette.component';
-import { CardUstensileComponent } from './recette/show-recette/ustensiles-recette/card-ustensile/card-ustensile.component';
-import { ListUstensileComponent } from './recette/show-recette/ustensiles-recette/list-ustensile/list-ustensile.component';
-import { ListIngredientComponent } from './recette/show-recette/ingredients-recette/list-ingredient/list-ingredient.component';
+import { AddRecetteComponent } from './recette/add-recette/add-recette.component';
+import { CardComponent } from './shared/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    AddRecetteComponent,
-    AddIngredientComponent,
-    IngredientComponent,
-    UstensileComponent,
-    AddUstensileComponent,
     RecetteComponent,
-    ShowRecetteComponent,
-    UstensilesRecetteComponent,
-    IngredientsRecetteComponent,
-    CardIngredientComponent,
-    AddIngredientRecetteComponent,
-    AddUstensileRecetteComponent,
-    CardUstensileComponent,
-    ListUstensileComponent,
-    ListIngredientComponent,
+    AddRecetteComponent,
+    CardComponent
   ],
 
   imports: [

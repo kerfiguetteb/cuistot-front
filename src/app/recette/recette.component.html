@@ -1,18 +1,13 @@
 
-<app-add-recette [recettes]="recettes"></app-add-recette>
+<app-add-recette (onRecette)="addRecette($event)" [recettes]="recettes"></app-add-recette>
 
 <div class="container">
     <hr>
     <h3>les recettes</h3>
     <div class="row d-flex justify-content-center">
-        <div *ngFor="let recette of recettes" class="card m-1 col-md-3" style="width: 13rem;">
-          <div class="text-end">
-            <button type="button" (click)="onRemove(recette)" class="btn-close mt-3"></button>
-          </div>
-            <img src="../../assets/img/logo.png" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{recette.nom}}</h5>
-              <button routerLink="/show/recettes/{{recette.id}}" class="btn btn-sm btn-warning">Voir</button>
-            </div>
-    </div>
+      <div *ngFor="let recette of recettes" class="card m-1 col-md-3" style="width: 13rem;">
+        <app-card [detail]="'recette'" [object]="recette" (onObject)="remove($event)" ></app-card>
+      </div>
+  </div>
+  
 </div>

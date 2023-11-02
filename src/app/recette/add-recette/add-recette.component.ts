@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import Recette from 'src/app/models/recette.model';
 import { RecetteService } from 'src/app/service/recette.service';
 
 @Component({
@@ -12,19 +13,19 @@ export class AddRecetteComponent {
   constructor(private formBuilder: FormBuilder, private recettesService: RecetteService){ }
 
   @Input()
-  recettes!: any[];
+  recettes!: Recette[];
 
   recetteForm: FormGroup = this.formBuilder.group({
     nom: ['', [Validators.required]]
   })
 
+  @Output()
+  onRecette: EventEmitter<Recette> = new EventEmitter();
+
   submitted: boolean = false;
 
   private addRecette(): void {
-    this.recettesService.createRecette(this.recetteForm.value).subscribe((recette) => {
-      this.recettes.push(recette); 
-    });
-
+    this.onRecette.emit(this.recetteForm.value)
     this.recetteForm.reset();
     this.submitted = false;
   }
