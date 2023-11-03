@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Ingredient from 'src/app/models/ingredient.model';
@@ -60,16 +61,45 @@ export class ShowRecetteComponent implements OnInit {
     });  
   } 
 
-  // suppression de l'ingredient ou de l'ustensile de la recette
-  public remove(element: IngredientQuantite | Ustensile):void
+  
+  /**
+   * récuperation de l'ustensile de la recette pour pouvoir la supprimer
+   * 
+   */
+  public removeUstensile(element: Ustensile):void
   {
-    console.log(element);
-    
+    /**
+     * suppression de l'ustensile
+     */
+    this.removeUstensileOfRecette(element)
   }
 
-  public addIngredient(): void
+  /**
+   * suppresiion de l'ustensile de la Recette
+   * @param ustensile 
+   */
+  private removeUstensileOfRecette(ustensile: Ustensile):void
   {
+  }
 
+
+  /**
+   * recuperation de la quantité
+   * @param element 
+   */
+  public removeQuantite(element: IngredientQuantite): void
+  {
+    console.log(element);
+  }
+
+
+  /**
+   * 
+   * @param recette 
+   */
+  private updateRecette(recette: Recette): void
+  {
+    this.recetteService.updateRecette(recette).subscribe()
   }
  
  

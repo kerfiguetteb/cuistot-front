@@ -12,11 +12,12 @@ export class AddRecetteComponent {
 
   constructor(private formBuilder: FormBuilder, private recettesService: RecetteService){ }
 
-  @Input()
-  recettes!: Recette[];
+
 
   recetteForm: FormGroup = this.formBuilder.group({
-    nom: ['', [Validators.required]]
+    nom: ['', [Validators.required]],
+    ustensiles:[[]],
+    ingredients:[[]]
   })
 
   @Output()
@@ -24,7 +25,9 @@ export class AddRecetteComponent {
 
   submitted: boolean = false;
 
-  private addRecette(): void {
+  private addRecette(): void {  
+    console.log(this.recetteForm.value);
+      
     this.onRecette.emit(this.recetteForm.value)
     this.recetteForm.reset();
     this.submitted = false;

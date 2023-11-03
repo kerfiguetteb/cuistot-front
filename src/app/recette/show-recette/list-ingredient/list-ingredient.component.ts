@@ -2,11 +2,11 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
 
 @Component({
-  selector: 'app-ingredients',
-  templateUrl: './ingredients.component.html',
-  styleUrls: ['./ingredients.component.scss']
+  selector: 'app-list-ingredient',
+  templateUrl: './list-ingredient.component.html',
+  styleUrls: ['./list-ingredient.component.scss']
 })
-export class IngredientsComponent {
+export class ListIngredientComponent {
 
   @Input()
   ingredients!: Ingredient[]
@@ -17,17 +17,16 @@ export class IngredientsComponent {
   @Output()
   onAddIngredient: EventEmitter<Ingredient> = new EventEmitter()
 
-  // fonction qui remonte l'ingredient au composant parent pour modifier la recette
-  public remove(element: Ingredient){
-   this.onRemoveIngredient.emit(element)
+  public remove(element: Ingredient): void 
+  {
+    console.log(element);
+    
+    this.onRemoveIngredient.emit(element)
   }
 
-  // fonction qui remonte l'ingredient au composant parent pour ajouter la recette
   public add(element: Ingredient): void
   {
     this.onAddIngredient.emit(element)
   }
-
-
 
 }

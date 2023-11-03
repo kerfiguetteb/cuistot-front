@@ -12,10 +12,10 @@ import { AddRecetteComponent } from './recette/add-recette/add-recette.component
 import { CardComponent } from './shared/card/card.component';
 import { ShowRecetteComponent } from './recette/show-recette/show-recette.component';
 import { TableComponent } from './shared/table/table.component';
-import { IngredientsComponent } from './recette/show-recette/ingredients/ingredients.component';
-import { UstensilesComponent } from './recette/show-recette/ustensiles/ustensiles.component';
 import { AddUstensileComponent } from './recette/show-recette/add-ustensile/add-ustensile.component';
 import { AddIngredientComponent } from './recette/show-recette/add-ingredient/add-ingredient.component';
+import { ListIngredientComponent } from './recette/show-recette/list-ingredient/list-ingredient.component';
+import { ListUstensileComponent } from './recette/show-recette/list-ustensile/list-ustensile.component';
 
 @NgModule({
   declarations: [
@@ -27,10 +27,10 @@ import { AddIngredientComponent } from './recette/show-recette/add-ingredient/ad
     CardComponent,
     ShowRecetteComponent,
     TableComponent,
-    IngredientsComponent,
-    UstensilesComponent,
     AddUstensileComponent,
-    AddIngredientComponent
+    AddIngredientComponent,
+    ListIngredientComponent,
+    ListUstensileComponent
   ],
 
   imports: [
