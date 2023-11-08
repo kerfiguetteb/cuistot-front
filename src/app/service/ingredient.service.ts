@@ -25,7 +25,7 @@ export class IngredientService {
   }
 
   updateIngredient(ingredient: Ingredient): Observable<Ingredient>{
-    return this.httpClient.put<Ingredient>(`${this.apiUrl}/ingredient/${ingredient.id}`, ingredient)
+    return this.httpClient.put<Ingredient>(`${this.apiUrl}/ingredients/${ingredient.id}`, ingredient)
   }
 
   deleteIngredient(id: number): Observable<Ingredient>{

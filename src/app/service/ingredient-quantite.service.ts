@@ -25,6 +25,10 @@ export class IngredientQuantiteService {
     return this.httpClient.put<IngredientQuantite>(`${this.apiUrl}/ingredientQuantites/${ingredientQuantite.id}`, ingredientQuantite)
   }
 
+  patchIngredientQuantite( ingredientQuantite: IngredientQuantite): Observable<IngredientQuantite>{
+    return this.httpClient.patch<IngredientQuantite>(`${this.apiUrl}/ingredientQuantites/${ingredientQuantite.id}`, ingredientQuantite)
+  }
+
   deleteIngredientQuantite( id: number): Observable<IngredientQuantite>{
     return this.httpClient.delete<IngredientQuantite>(`${this.apiUrl}/ingredientQuantites/${id}`)
   }

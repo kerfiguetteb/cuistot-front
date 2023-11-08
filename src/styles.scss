@@ -1,10 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
-html, body {
-    margin:0;
-    padding:0;
-    height:100%;
- }
+html{
+    
+    height: 100%; 
 
- #container {
-    height:100%;
- }
+}
+body {
+     margin: 0;   
+     font-family: Hind Madurai; 
+    }
+
+h1{
+    font-family: Montserrat;
+}
+
+h2 h3 h4 h5 h6 {
+    font-family: Lora;
+}
+
+/* styles.css */
+
+/* Importation des styles Bootstrap */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+/* Importation des styles Bootstrap Icons */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+

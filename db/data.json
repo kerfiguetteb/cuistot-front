@@ -1,0 +1,32 @@
+{
+  "ustensiles": [
+    {
+      "nom": "test",
+      "id": 1
+    }
+  ],
+  "ingredientQuantites": [],
+  "ingredients": [
+    {
+      "nom": "farine",
+      "id": 1
+    },
+    {
+      "nom": "sucre",
+      "id": 2
+    }
+  ],
+  "recettes": [
+    {
+      "nom": "test",
+      "ustensiles": [
+        {
+          "nom": "test",
+          "id": 1
+        }
+      ],
+      "ingredients": [],
+      "id": 1
+    }
+  ]
+}

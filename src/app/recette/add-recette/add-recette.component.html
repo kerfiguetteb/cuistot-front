@@ -1,0 +1,10 @@
+<div class="container mt-5">
+  <form [formGroup]="recetteForm" (ngSubmit)="onSubmit()">
+    <div class="input-group mb-3">
+      <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-list"></i></span>
+      <input type="text" class="form-control" placeholder="Ex: Tropezienne..." aria-label="recette"
+        aria-describedby="basic-addon1" id="nom" formControlName="nom">
+    </div>
+    <button class="btn btn-secondary" type="submit">Enregistrer</button>
+  </form>
+</div>

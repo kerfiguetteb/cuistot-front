@@ -1,0 +1,13 @@
+
+<app-add-recette (onRecette)="addRecette($event)"></app-add-recette>
+
+<div class="container">
+    <hr>
+    <h3>les recettes</h3>
+    <div class="row d-flex justify-content-center">
+      <div *ngFor="let recette of recettes" class="card m-1 col-md-3" style="width: 13rem;">
+        <app-card [detail]="'recette'" [object]="recette" (onRemoveObject)="remove($event)" ></app-card>
+      </div>
+  </div>
+  
+</div>
