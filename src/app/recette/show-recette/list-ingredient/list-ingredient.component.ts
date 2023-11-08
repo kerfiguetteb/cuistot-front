@@ -72,17 +72,25 @@ export class ListIngredientComponent {
     this.ingredientService.deleteIngredient(ingredient.id).subscribe()
   }
 
+  /**
+   * ajout/filtrage des ingredient dans la recette
+   */
   public add(ingredient: Ingredient): void
   {
     this.addIngredientOfRecette(ingredient)
     this.ingredientFilter(ingredient.id)
   }
 
+  /**
+   * Ajout/enregistrement des ingredient avec la quantite dans la recette
+   * @param ingredient 
+   */
   private addIngredientOfRecette(ingredient: Ingredient): void
   {
     this.quantite.ingredient = ingredient
-    this.ingredientquantite.createIngredientQuantite(this.quantite).subscribe()
-    this.recette.quantites.push(this.quantite)
+    this.ingredientquantite.createIngredientQuantite(this.quantite).subscribe((quantite) => {
+      this.recette.quantites.push(quantite)
+    })
     this.recetteService.updateRecette(this.recette).subscribe()
   }
 
@@ -93,17 +101,19 @@ export class ListIngredientComponent {
    */
   public getIngredientForm(ingredient: Ingredient): void
   {
-    this.ingredients.push(ingredient)
     this.addIngredient(ingredient)
   }
 
   /**
-   * enregistrement de l'ingredient 
+   * enregistrement de l'ingredient et ajout de l'ingredient dans le tableau des ingredients
    * @param ingredient 
    */
   private addIngredient(ingredient: Ingredient): void
   {
-    this.ingredientService.createIngredient(ingredient).subscribe()
+    this.ingredientService.createIngredient(ingredient).subscribe((ingredient) => 
+    {
+      this.ingredients.push(ingredient)
+    })
   }
 
 }

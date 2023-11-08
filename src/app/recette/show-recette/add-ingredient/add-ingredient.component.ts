@@ -29,7 +29,6 @@ export class AddIngredientComponent {
 
   private addIngredient(): void {
     this.onIngredient.emit(this.ingredientForm.value)
-
     this.ingredientForm.reset();
     this.submitted = false;
   }
