@@ -87,11 +87,24 @@ export class ShowRecetteComponent implements OnInit {
    */
   public removeUstensile(element: Ustensile):void
   {
-      const ustensilesFilter = this.recette.ustensiles.filter((ustensile => ustensile.id !== element.id))
-      this.recette.ustensiles = ustensilesFilter
-      this.updateRecette(this.recette)
-      this.getUstensilesFilter()
+    
+    this.ustensileFilter(element.id)
+    this.updateRecette(this.recette)
+    this.getUstensilesFilter()
   }
+
+  private ustensileFilter(id: number): void{
+    const ustensilesFilter = this.recette.ustensiles.filter((
+      ustensile => ustensile.id !== id))
+    this.recette.ustensiles = ustensilesFilter
+}
+
+  private ingredientFilter(id: number): void{
+    const ingredientFilter = this.recette.quantites.filter((
+      quantite => quantite.ingredient.id !== id))
+    this.recette.quantites = ingredientFilter
+    
+}
 
   /**
    * suppresiion de l'ustensile de la Recette
@@ -103,8 +116,10 @@ export class ShowRecetteComponent implements OnInit {
    * @param element 
    */
   public removeQuantite(element: IngredientQuantite): void
-  {
-    console.log(element);
+  {    
+    this.ingredientFilter(element.ingredient.id)
+    this.updateRecette(this.recette)
+    this.getIngredientFilter()
   }
 
 

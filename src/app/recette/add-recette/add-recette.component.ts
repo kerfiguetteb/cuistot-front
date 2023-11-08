@@ -17,7 +17,7 @@ export class AddRecetteComponent {
   recetteForm: FormGroup = this.formBuilder.group({
     nom: ['', [Validators.required]],
     ustensiles:[[]],
-    ingredients:[[]]
+    quantites:[[]]
   })
 
   @Output()
