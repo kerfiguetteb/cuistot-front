@@ -2,10 +2,10 @@
 
     <h1>{{recette.nom}}</h1>
     <div class="row">
-        <div class="col-md-6">
+        <div *ngIf="recette.quantites" class="col-md-6">
             <app-table [detail]="'ingredientsQuantite'" [objects]="recette" (onObjects)="removeQuantite($event)"></app-table>
         </div>
-        <div class="col-md-6">
+        <div *ngIf="recette.ustensiles.length > 0" class="col-md-6">
             <app-table [detail]="'ustensiles'" [objects]="recette" (onObjects)="removeUstensile($event)"></app-table>
         </div>
 

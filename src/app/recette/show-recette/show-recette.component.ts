@@ -33,12 +33,21 @@ export class ShowRecetteComponent implements OnInit {
     private ustensileService: UstensileService
   ) { }
 
+  /**
+   * 
+   * @param id 
+   */
   private subscribeRecette(id: number): void {
     this.recetteService.getRecette(id).subscribe((recette) => {
       this.recette = recette
     })
   }
 
+  /**
+   * 
+   * @param type 
+   * @param id 
+   */
   private setSubscribe(type: string | null, id: string | null): void {
     if (id && type === 'recettes') {
       this.subscribeRecette(+id)
@@ -48,14 +57,24 @@ export class ShowRecetteComponent implements OnInit {
   }
 
   // cette fonction filtres les ingredients en fonction des ingredients que possede la recette
-   public getIngredientFilter(){
+  public getIngredientFilter(){
     this.ingredientService.getIngredients().subscribe((ingredient) => {
       this.ingredients = ingredient
-
       this.recette.quantites.forEach((element) => {
-
         const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== element.ingredient.id))
         this.ingredients = ingredientFilter
+        
+      })
+    });  
+  } 
+
+  // cette fonction filtres les ustensiles en fonction des ustensiles que possede la recette
+  public getUstensilesFilter(){
+    this.ustensileService.getUstensiles().subscribe((ustensile) => {
+      this.ustensiles = ustensile
+      this.recette.ustensiles.forEach((element) => {
+        const ustensilesFilter = this.ustensiles.filter((ustensile => ustensile.id !== element.id))
+        this.ustensiles = ustensilesFilter
         
       })
     });  
@@ -64,24 +83,20 @@ export class ShowRecetteComponent implements OnInit {
   
   /**
    * récuperation de l'ustensile de la recette pour pouvoir la supprimer
-   * 
+   * @param element
    */
   public removeUstensile(element: Ustensile):void
   {
-    /**
-     * suppression de l'ustensile
-     */
-    this.removeUstensileOfRecette(element)
+      const ustensilesFilter = this.recette.ustensiles.filter((ustensile => ustensile.id !== element.id))
+      this.recette.ustensiles = ustensilesFilter
+      this.updateRecette(this.recette)
+      this.getUstensilesFilter()
   }
 
   /**
    * suppresiion de l'ustensile de la Recette
    * @param ustensile 
    */
-  private removeUstensileOfRecette(ustensile: Ustensile):void
-  {
-  }
-
 
   /**
    * recuperation de la quantité
@@ -109,10 +124,7 @@ export class ShowRecetteComponent implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     this.setSubscribe(type, id)
 
-    this.ustensileService.getUstensiles().subscribe((ustensile) => {
-      this.ustensiles = ustensile
-    })  
-
+    this.getUstensilesFilter()
     this.getIngredientFilter()
   }
 
