@@ -26,23 +26,23 @@ export class ListIngredientComponent {
 
 
     /**
-   * cette fonction filtre les ustensiles en fonction des ustensile de la recette 
+   * cette fonction filtre les ingredients en fonction des ingredients de la recette 
    */
     public filterUstensile(){
-      this.recette.quantites.forEach((element) => {
-        const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== element.ingredient.id))
+      this.recette.quantites.forEach((ingredientquantite) => {
+        const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== ingredientquantite.ingredient.id))
         this.ingredients = ingredientFilter
       })
       
     }
   
 
-  public remove(element: any): void
+  public remove(ingredient: Ingredient): void
   {
 
   }
 
-  public add(element: any): void
+  public add(ingredient: Ingredient): void
   {}
 
 
