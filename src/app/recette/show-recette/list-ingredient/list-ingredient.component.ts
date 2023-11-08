@@ -1,5 +1,9 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
+import Recette from 'src/app/models/recette.model';
+import { IngredientQuantiteService } from 'src/app/service/ingredient-quantite.service';
+import { IngredientService } from 'src/app/service/ingredient.service';
+import { RecetteService } from 'src/app/service/recette.service';
 
 @Component({
   selector: 'app-list-ingredient',
@@ -8,25 +12,57 @@ import Ingredient from 'src/app/models/ingredient.model';
 })
 export class ListIngredientComponent {
 
+  constructor(
+    private ingredientService: IngredientService,
+    private ingredientquantite: IngredientQuantiteService,
+    private recetteService: RecetteService
+    ) {}
+
   @Input()
   ingredients!: Ingredient[]
 
-  @Output()
-  onRemoveIngredient: EventEmitter<Ingredient> = new EventEmitter()
+  @Input ()
+  recette!: Recette
 
-  @Output()
-  onAddIngredient: EventEmitter<Ingredient> = new EventEmitter()
 
-  public remove(element: Ingredient): void 
+    /**
+   * cette fonction filtre les ustensiles en fonction des ustensile de la recette 
+   */
+    public filterUstensile(){
+      this.recette.quantites.forEach((element) => {
+        const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== element.ingredient.id))
+        this.ingredients = ingredientFilter
+      })
+      
+    }
+  
+
+  public remove(element: any): void
   {
-    console.log(element);
-    
-    this.onRemoveIngredient.emit(element)
+
   }
 
-  public add(element: Ingredient): void
+  public add(element: any): void
+  {}
+
+
+  /**
+   * recupération de l'evenement, ajout ingredient dans le tableau d'ingredients et sauvegarde de l'ingredients
+   * @param ingredient 
+   */
+  public getIngredientForm(ingredient: Ingredient): void
   {
-    this.onAddIngredient.emit(element)
+    this.ingredients.push(ingredient)
+    this.addIngredient(ingredient)
+  }
+
+  /**
+   * enregistrement de l'ingredient 
+   * @param ingredient 
+   */
+  private addIngredient(ingredient: Ingredient): void
+  {
+    this.ingredientService.createIngredient(ingredient).subscribe()
   }
 
 }

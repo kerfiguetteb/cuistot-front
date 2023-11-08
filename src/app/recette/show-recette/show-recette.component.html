@@ -29,8 +29,7 @@
         <div class="tab-content">
             <div class="tab-pane" id="ingredient" role="tabpanel">
                 <div>
-                    <app-add-ingredient></app-add-ingredient>
-                    <app-list-ingredient [ingredients]="ingredients"></app-list-ingredient>
+                    <app-list-ingredient [ingredients]="ingredients" [recette]="recette"></app-list-ingredient>
                 </div>
             </div>
             <div class="tab-pane" id="ustensile" role="tabpanel">

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
+import IngredientQuantite from 'src/app/models/ingredientQuantite.model';
 import Recette from 'src/app/models/recette.model';
 import Ustensile from 'src/app/models/ustensile.model';
 
@@ -33,8 +34,14 @@ export class CardComponent {
 
   }
 
-  public add(element: Recette | Ingredient | Ustensile){
+    /**
+   * ecouteur d'evenement qui envoi l'objet au parent
+   * @param element 
+   */
+  public add(element: Recette | Ingredient | Ustensile | IngredientQuantite){
     this.onAddObject.emit(element)
   }
+
+  
 
 }

@@ -1,60 +1,8 @@
 {
   "ustensiles": [
     {
-      "nom": "four",
+      "nom": "test",
       "id": 1
-    },
-    {
-      "nom": "poêle",
-      "id": 2
-    },
-    {
-      "nom": "125",
-      "id": 3
-    },
-    {
-      "nom": "test",
-      "id": 4
-    },
-    {
-      "nom": "poele",
-      "id": 5
-    },
-    {
-      "nom": "cx cx ",
-      "id": 6
-    },
-    {
-      "nom": "zczcececxexexexe",
-      "id": 7
-    },
-    {
-      "nom": "zcece",
-      "id": 8
-    },
-    {
-      "nom": "sdcece",
-      "id": 10
-    },
-    {
-      "nom": "<w<w",
-      "id": 11
-    },
-    {
-      "nom": "123",
-      "id": 12
-    },
-    {
-      "nom": "test",
-      "id": 13
-    },
-    {
-      "nom": "outman",
-      "id": 14
-    },
-    {
-      "nom": "kerfiguetteb",
-      "id": 15
     }
   ],
   "ingredientQuantites": [],
@@ -62,12 +10,21 @@
     {
       "nom": "farine",
       "id": 1
+    },
+    {
+      "nom": "sucre",
+      "id": 2
     }
   ],
   "recettes": [
     {
       "nom": "test",
-      "ustensiles": [],
+      "ustensiles": [
+        {
+          "nom": "test",
+          "id": 1
+        }
+      ],
       "ingredients": [],
       "id": 1
     }
