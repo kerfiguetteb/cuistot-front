@@ -1,6 +1,6 @@
   <!-- tableau ingredients-recette -->
 
-<div *ngIf="objects.ingredients && detail === 'ingredientsQuantite'" class="card">
+<div *ngIf="objects.quantites && detail === 'ingredientsQuantite'" class="card">
   <div class="card-body">
       <table class="table">
           <thead>
@@ -15,8 +15,7 @@
             <tr *ngFor="let ingredient of objects.quantites; let i = index ">
               <th scope="row">{{i + 1}} </th>
               <td>{{ingredient.quantite}} grammes</td>
-              <td> id : {{ingredient.ingredient.id}}</td>
-              <td>{{ingredient.nomIngredient}}</td>
+              <td>{{ingredient.ingredient.nom}}</td>
               <td><button (click)="event(ingredient)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
             </tr>
           </tbody>

@@ -5,12 +5,23 @@
       "id": 1
     }
   ],
-  "ingredientQuantites": [],
-  "ingredients": [
+  "ingredientQuantites": [
     {
-      "nom": "farine",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 2
+      },
       "id": 1
     },
+    {
+      "ingredient": {
+        "nom": "sel",
+        "id": 3
+      },
+      "id": 2
+    }
+  ],
+  "ingredients": [
     {
       "nom": "sucre",
       "id": 2
@@ -29,7 +40,20 @@
           "id": 1
         }
       ],
-      "ingredients": [],
+      "quantites": [
+        {
+          "ingredient": {
+            "nom": "sucre",
+            "id": 2
+          }
+        },
+        {
+          "ingredient": {
+            "nom": "sel",
+            "id": 3
+          }
+        }
+      ],
       "id": 1
     }
   ]

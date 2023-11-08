@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import Ingredient from 'src/app/models/ingredient.model';
+import IngredientQuantite from 'src/app/models/ingredientQuantite.model';
 import Recette from 'src/app/models/recette.model';
 import { IngredientQuantiteService } from 'src/app/service/ingredient-quantite.service';
 import { IngredientService } from 'src/app/service/ingredient.service';
@@ -24,26 +25,66 @@ export class ListIngredientComponent {
   @Input ()
   recette!: Recette
 
+  quantite: IngredientQuantite = new IngredientQuantite()
+
 
     /**
    * cette fonction filtre les ingredients en fonction des ingredients de la recette 
    */
-    public filterUstensile(){
+    public filterIngredient(){
       this.recette.quantites.forEach((ingredientquantite) => {
-        const ingredientFilter = this.ingredients.filter((ingredient => ingredient.id !== ingredientquantite.ingredient.id))
-        this.ingredients = ingredientFilter
+        this.ingredientFilter(ingredientquantite.ingredient.id)
       })
       
     }
   
 
+  /**
+   * recuperation de l'objet de l'événement
+   * suppression de l'objet
+   * filtrage du tableau de l'ingredients
+   * @param ingredient 
+   */
   public remove(ingredient: Ingredient): void
   {
+    this.deleteIngredient(ingredient)
+    this.ingredientFilter(ingredient.id)
 
   }
 
+  /**
+   * filtrage des ingredients
+   * @param id 
+   */
+  private ingredientFilter(id: number):void
+  {
+    const ingredientFilter = this.ingredients.filter((o => o.id !== id))
+    this.ingredients = ingredientFilter
+  }
+
+
+  /**
+   * supression de l'ingredient
+   * @param ingredient 
+   */
+  private deleteIngredient(ingredient: Ingredient): void
+  {
+    this.ingredientService.deleteIngredient(ingredient.id).subscribe()
+  }
+
   public add(ingredient: Ingredient): void
-  {}
+  {
+    this.addIngredientOfRecette(ingredient)
+    this.ingredientFilter(ingredient.id)
+  }
+
+  private addIngredientOfRecette(ingredient: Ingredient): void
+  {
+    this.quantite.ingredient = ingredient
+    this.ingredientquantite.createIngredientQuantite(this.quantite).subscribe()
+    this.recette.quantites.push(this.quantite)
+    this.recetteService.updateRecette(this.recette).subscribe()
+  }
 
 
   /**
