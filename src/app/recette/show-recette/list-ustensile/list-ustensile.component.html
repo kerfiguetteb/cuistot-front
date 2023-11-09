@@ -1,6 +1,6 @@
 <app-add-ustensile (onUstensile)="getUstensileForm($event)"></app-add-ustensile>
 <div class="row d-flex justify-content-center">
-    <div *ngFor="let ustensile of ustensiles" class="card m-1 col-md-3" style="width: 13rem;">
-        <app-card [detail]="'ingredients'" [object]="ustensile" (onRemoveObject)="remove($event)" (onAddObject)="add($event)"></app-card>
+    <div *ngFor="let ustensile of ustensiles" class="card m-1 col-md-3" style="width: 18rem;">
+        <app-card [detail]="'ustensiles'" [object]="ustensile" (onRemoveObject)="remove($event)" (onAddObject)="add($event)"></app-card>
     </div>
 </div>

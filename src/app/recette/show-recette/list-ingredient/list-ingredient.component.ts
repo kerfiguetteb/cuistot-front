@@ -25,8 +25,6 @@ export class ListIngredientComponent {
   @Input ()
   recette!: Recette
 
-  quantite: IngredientQuantite = new IngredientQuantite()
-
 
     /**
    * cette fonction filtre les ingredients en fonction des ingredients de la recette 
@@ -75,23 +73,26 @@ export class ListIngredientComponent {
   /**
    * ajout/filtrage des ingredient dans la recette
    */
-  public add(ingredient: Ingredient): void
+  public add(quantite: IngredientQuantite): void
   {
-    this.addIngredientOfRecette(ingredient)
-    this.ingredientFilter(ingredient.id)
+    // Ajout de la quantité dans la recette
+    this.addIngredientOfRecette(quantite)
+    
+    this.ingredientFilter(quantite.ingredient.id)
   }
 
   /**
    * Ajout/enregistrement des ingredient avec la quantite dans la recette
    * @param ingredient 
    */
-  private addIngredientOfRecette(ingredient: Ingredient): void
+  private addIngredientOfRecette(quantite: IngredientQuantite): void
   {
-    this.quantite.ingredient = ingredient
-    this.ingredientquantite.createIngredientQuantite(this.quantite).subscribe((quantite) => {
+    // creation de la quantité
+    this.ingredientquantite.createIngredientQuantite(quantite).subscribe((quantite) => {
+      // ajout de la quantité dans la recette
       this.recette.quantites.push(quantite)
+      this.recetteService.updateRecette(this.recette).subscribe()
     })
-    this.recetteService.updateRecette(this.recette).subscribe()
   }
 
 
