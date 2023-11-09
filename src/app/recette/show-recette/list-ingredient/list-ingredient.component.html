@@ -1,6 +1,6 @@
 <app-add-ingredient (onIngredient)="getIngredientForm($event)"></app-add-ingredient>
-<div class="row d-flex justify-content-center">
-    <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 13rem;">
-        <app-card [detail]="'ingredients'" [object]="ingredient" (onRemoveObject)="remove($event)" (onAddObject)="add($event)"></app-card>
+<div class="row d-flex justify-content-center mt-3">
+    <div *ngFor="let ingredient of ingredients" class="card m-1 col-md-3" style="width: 18rem;">
+        <app-card [detail]="'ingredientQuantites'" [object]="ingredient" (onRemoveObject)="remove($event)" (onAddObject)="add($event)"></app-card>
     </div>
 </div>

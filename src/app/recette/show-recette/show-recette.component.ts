@@ -106,10 +106,6 @@ export class ShowRecetteComponent implements OnInit {
     
 }
 
-  /**
-   * suppresiion de l'ustensile de la Recette
-   * @param ustensile 
-   */
 
   /**
    * recuperation de la quantité
