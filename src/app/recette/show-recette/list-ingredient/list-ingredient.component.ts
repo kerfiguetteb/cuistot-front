@@ -25,6 +25,9 @@ export class ListIngredientComponent {
   @Input ()
   recette!: Recette
 
+  message!: boolean
+
+
 
     /**
    * cette fonction filtre les ingredients en fonction des ingredients de la recette 
@@ -79,6 +82,7 @@ export class ListIngredientComponent {
     this.addIngredientOfRecette(quantite)
     
     this.ingredientFilter(quantite.ingredient.id)
+
   }
 
   /**
@@ -115,6 +119,8 @@ export class ListIngredientComponent {
     {
       this.ingredients.push(ingredient)
     })
+    this.message = true
+
   }
 
 }

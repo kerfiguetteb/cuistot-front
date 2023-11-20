@@ -1,16 +1,19 @@
 
 <div class="container">
   <h1 class="custom-h1"> <i class="bi bi-flower2"></i> les recettes</h1>
+  <app-validation-message [message]="message"></app-validation-message>
   <div class="row d-flex justify-content-center">
     <div class="text-end mt-3">
       <span class="span-custom">Pour ajouter une recette cliqué ici </span><button (click)="toggle()"
           class=" btn-custom">+ </button>
   </div>
 
+  
       <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
+
+
       <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
         <app-card [detail]="'recette'" [object]="recette" (onRemoveObject)="remove($event)" ></app-card>
       </div>
   </div>
   
-</div>

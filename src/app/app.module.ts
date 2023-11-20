@@ -16,6 +16,7 @@ import { AddUstensileComponent } from './recette/show-recette/add-ustensile/add-
 import { AddIngredientComponent } from './recette/show-recette/add-ingredient/add-ingredient.component';
 import { ListIngredientComponent } from './recette/show-recette/list-ingredient/list-ingredient.component';
 import { ListUstensileComponent } from './recette/show-recette/list-ustensile/list-ustensile.component';
+import { ValidationMessageComponent } from './shared/component/validation-message/validation-message.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ListUstensileComponent } from './recette/show-recette/list-ustensile/li
     AddUstensileComponent,
     AddIngredientComponent,
     ListIngredientComponent,
-    ListUstensileComponent
+    ListUstensileComponent,
+    ValidationMessageComponent
   ],
 
   imports: [

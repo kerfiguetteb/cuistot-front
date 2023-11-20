@@ -1,20 +1,12 @@
 {
   "ustensiles": [
     {
-      "nom": "four",
-      "id": 1
-    },
-    {
       "nom": "robot patissier",
       "id": 2
     },
     {
       "nom": "bole",
       "id": 3
-    },
-    {
-      "nom": "test",
-      "id": 4
     }
   ],
   "ingredientQuantites": [
@@ -1215,49 +1207,59 @@
         "id": 1
       },
       "id": 163
+    },
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 2
+      },
+      "id": 164
+    },
+    {
+      "quantite": "125 grammes",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 2
+      },
+      "id": 165
+    },
+    {
+      "quantite": "10 grammes",
+      "ingredient": {
+        "nom": "Sel",
+        "id": 3
+      },
+      "id": 166
+    },
+    {
+      "quantite": "250 grammes",
+      "ingredient": {
+        "nom": "Farine",
+        "id": 4
+      },
+      "id": 167
     }
   ],
   "ingredients": [
     {
-      "nom": "farine",
-      "id": 1
-    },
-    {
-      "nom": "sel",
+      "nom": "Sucre",
       "id": 2
     },
     {
-      "nom": "sucre",
+      "nom": "Sel",
       "id": 3
     },
     {
-      "nom": "oeuf",
+      "nom": "Farine",
       "id": 4
-    },
-    {
-      "nom": "levure boulangere",
-      "id": 7
     }
   ],
   "recettes": [
     {
       "nom": "Tropezienne",
-      "ustensiles": [
-        {
-          "nom": "four",
-          "id": 1
-        }
-      ],
-      "quantites": [
-        {
-          "quantite": "150g",
-          "ingredient": {
-            "nom": "farine",
-            "id": 1
-          },
-          "id": 163
-        }
-      ],
+      "ustensiles": [],
+      "quantites": [],
       "id": 1
     }
   ]

@@ -13,12 +13,18 @@ export class RecetteComponent implements OnInit {
 
   recettes!: Recette[]
 
+  message!: boolean
+
 
   hidden: boolean = true
   
   toggle() {
     this.hidden = !this.hidden;
   }
+
+  /**
+   * fermer la fenetre du message
+   */
 
 
   /**
@@ -38,7 +44,9 @@ export class RecetteComponent implements OnInit {
    * @param element 
    */
   public addRecette(element: Recette): void {
+    this.message = true
     this.create(element)
+
   }
 
   /**

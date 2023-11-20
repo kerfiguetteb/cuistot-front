@@ -19,6 +19,8 @@ export class ListUstensileComponent {
   @Input()
   recette!: Recette
 
+  message!: boolean
+
 
   /**
    * cette fonction filtre les ustensiles en fonction des ustensile de la recette 
@@ -90,6 +92,8 @@ export class ListUstensileComponent {
       this.ustensileService.createUstensile(ustensile).subscribe((ustensile) => {
         this.ustensiles.push(ustensile)
       })
+      this.message = true
+
     }
   
 

@@ -1,5 +1,8 @@
-<button (click)="toggle()"
-class=" btn-custom mb-3">+ Ajouter ustensile</button>
+<button class="btn-custom" (click)="toggle()"> Ajouter ustensile
+  <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
+  <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
+  
+  </button>
 
 <div *ngIf="!hidden">
     <form [formGroup]="ustensileForm" (ngSubmit)="onSubmit()">
