@@ -1183,6 +1183,38 @@
         "id": 2
       },
       "id": 159
+    },
+    {
+      "quantite": "150g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 3
+      },
+      "id": 160
+    },
+    {
+      "quantite": "qsdzesqz",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 161
+    },
+    {
+      "quantite": "200g",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 162
+    },
+    {
+      "quantite": "150g",
+      "ingredient": {
+        "nom": "farine",
+        "id": 1
+      },
+      "id": 163
     }
   ],
   "ingredients": [
@@ -1212,38 +1244,18 @@
       "nom": "Tropezienne",
       "ustensiles": [
         {
-          "nom": "robot patissier",
-          "id": 2
-        },
-        {
-          "nom": "bole",
-          "id": 3
-        },
-        {
-          "nom": "robot patissier",
-          "id": 2
-        },
-        {
           "nom": "four",
           "id": 1
         }
       ],
       "quantites": [
         {
-          "quantite": "150 g",
-          "ingredient": {
-            "nom": "levure boulangere",
-            "id": 7
-          },
-          "id": 152
-        },
-        {
-          "quantite": "250g",
+          "quantite": "150g",
           "ingredient": {
             "nom": "farine",
             "id": 1
           },
-          "id": 154
+          "id": 163
         }
       ],
       "id": 1

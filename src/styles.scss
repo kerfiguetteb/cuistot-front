@@ -1,12 +1,21 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #157a6e;
+$warning:#efb224; 
+$gray: #7e8280;
+
+
+body {
+    margin: 0;   
+    font-family: Hind Madurai; 
+
+}
+
 html{
     
     height: 100%; 
 
 }
-body {
-     margin: 0;   
-     font-family: Hind Madurai; 
-    }
 
 h1{
     font-family: Montserrat;
@@ -16,7 +25,43 @@ h2 h3 h4 h5 h6 {
     font-family: Lora;
 }
 
-/* styles.css */
+input[type="text"]{
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+	color: $gray;
+    transition: 0.2s ease;
+    border-bottom: 1px solid $gray;
+    outline: none;
+}
+
+input[type="text"]:focus{
+    border: none;
+    border-bottom: 2px solid $primary;
+    color: $primary;
+    transition: 0.2s ease;
+}
+
+button{
+    padding: 10px 15px;
+    background: $secondary;
+    border: none;
+    color: #FFF;
+    font-weight: 500;
+    border-radius: 25px !important;
+    text-transform: uppercase;
+    transition: 0.1s ease;
+}
+
+button:hover, button:focus{
+    opacity: 0.8;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    transition: 0.1s ease;
+}
+
+
 
 /* Importation des styles Bootstrap */
 @import "~bootstrap/dist/css/bootstrap.min.css";

@@ -3,14 +3,13 @@ class=" btn-custom mb-3">+ Ajouter ustensile</button>
 
 <div *ngIf="!hidden">
     <form [formGroup]="ustensileForm" (ngSubmit)="onSubmit()">
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-list"></i></span>
-            <input type="text" class="form-control" placeholder="Ex: poêle.." 
-              aria-label="ustensile" aria-describedby="basic-addon1"
-            id="nom"
-            formControlName="nom"
-            >
-          </div>  
-          <button class="btn btn-secondary" type="submit">Enregistrer</button> 
+      <div class="row d-flex justify-content-end ">
+        <div class="col-md-9">
+          <input type="text" placeholder="Ex: Four..."  id="nom" formControlName="nom">
+        </div>
+        <div class="col-md-2 ">
+          <button type="submit" class="mt-3"> <i class="bi bi-check-lg "></i> Enregistrer</button>
+        </div>
+      </div>
     </form>
 </div>

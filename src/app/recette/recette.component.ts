@@ -13,6 +13,14 @@ export class RecetteComponent implements OnInit {
 
   recettes!: Recette[]
 
+
+  hidden: boolean = true
+  
+  toggle() {
+    this.hidden = !this.hidden;
+  }
+
+
   /**
    * filtrage des données de Recette  
    * @param recette 
