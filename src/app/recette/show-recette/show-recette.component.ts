@@ -1,4 +1,3 @@
-import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import Ingredient from 'src/app/models/ingredient.model';
@@ -57,7 +56,7 @@ export class ShowRecetteComponent implements OnInit {
   }
 
   // cette fonction filtres les ingredients en fonction des ingredients que possede la recette
-  public getIngredientFilter(){
+  public getIngredientFilter():void{
     this.ingredientService.getIngredients().subscribe((ingredient) => {
       this.ingredients = ingredient
       this.recette.quantites.forEach((element) => {
@@ -69,7 +68,7 @@ export class ShowRecetteComponent implements OnInit {
   } 
 
   // cette fonction filtres les ustensiles en fonction des ustensiles que possede la recette
-  public getUstensilesFilter(){
+  public getUstensilesFilter(): void{
     this.ustensileService.getUstensiles().subscribe((ustensile) => {
       this.ustensiles = ustensile
       this.recette.ustensiles.forEach((element) => {
@@ -87,18 +86,28 @@ export class ShowRecetteComponent implements OnInit {
    */
   public removeUstensile(element: Ustensile):void
   {
-    
+    // Filtrage de l'ustensile qu'on veut suprimmer 
     this.ustensileFilter(element.id)
+    // Mise a jour de la recette
     this.updateRecette(this.recette)
+    // Appel de la fonction de service (getallUstensile) et de filtrage  des ustensilles
     this.getUstensilesFilter()
   }
 
+  /**
+   * filtrage des ustensile
+   * @param id 
+   */
   private ustensileFilter(id: number): void{
     const ustensilesFilter = this.recette.ustensiles.filter((
       ustensile => ustensile.id !== id))
     this.recette.ustensiles = ustensilesFilter
 }
 
+/**
+ * filtrage des ustensile
+ * @param id 
+ */
   private ingredientFilter(id: number): void{
     const ingredientFilter = this.recette.quantites.filter((
       quantite => quantite.ingredient.id !== id))
@@ -106,15 +115,19 @@ export class ShowRecetteComponent implements OnInit {
     
 }
 
-
   /**
    * recuperation de la quantité
    * @param element 
    */
   public removeQuantite(element: IngredientQuantite): void
-  {    
+  {  
+    // Filtrage des ingredients qu'on veut suprimmer   
     this.ingredientFilter(element.ingredient.id)
+
+    // Mise a jour de la recette
     this.updateRecette(this.recette)
+
+    // Appel de la fonction de service (getallIngredient) et de filtrage  des ingredients
     this.getIngredientFilter()
   }
 

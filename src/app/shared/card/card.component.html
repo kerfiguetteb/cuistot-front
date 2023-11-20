@@ -5,17 +5,16 @@
 <div class="card-body">
     <h5 class="card-title">{{object.nom}}</h5>
     <button *ngIf="detail === 'recette'" routerLink="/show/recettes/{{object.id}}"
-        class="btn btn-sm btn-warning">Voir</button>
+        class="btn-custom">Voir</button>
         <form *ngIf="detail === 'ingredientQuantites'" [formGroup]="quantiteForm" (ngSubmit)="onSubmit()">
-            <div class="input-group mb-3">
-                <span class="input-group-text" id="basic-addon1"><i class="bi bi-card-list"></i></span>
-                <input type="text" class="form-control" placeholder="Ex: 125 grammes" aria-label="recette"
-                aria-describedby="basic-addon1" id="quantite" formControlName="quantite">
+            <div class=" input-group mb-3">
+                <label class="form-label" for="quantite"> * Entrez la quantite de {{object.nom}} de la recette ci-dessous</label>
+                <input type="text" class=" custom-input" placeholder="Ex: 125 grammes" name="quantite" id="quantite" formControlName="quantite">
             </div>
-            <button class="btn btn-sm btn-primary" type="submit">Ajouter</button>
+            <button type="submit" class="btn-custom"><i class="bi bi-check-lg "></i> Ajouter</button>
         </form>
         <div *ngIf="detail === 'ustensiles' || detail === 'ingredients'"  >
-            <button (click)="add(object)" class="btn btn-sm btn-primary"> Ajouter </button>
+            <button (click)="add(object)" class="btn-custom"> <i class="bi bi-check-lg "></i> Ajouter </button>
         </div>
 </div>
 

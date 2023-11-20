@@ -10,7 +10,7 @@ import { RecetteService } from 'src/app/service/recette.service';
 })
 export class AddRecetteComponent {
 
-  constructor(private formBuilder: FormBuilder, private recettesService: RecetteService){ }
+  constructor(private formBuilder: FormBuilder){ }
 
 
 
@@ -26,8 +26,6 @@ export class AddRecetteComponent {
   submitted: boolean = false;
 
   private addRecette(): void {  
-    console.log(this.recetteForm.value);
-      
     this.onRecette.emit(this.recetteForm.value)
     this.recetteForm.reset();
     this.submitted = false;

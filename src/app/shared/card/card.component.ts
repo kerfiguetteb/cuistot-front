@@ -8,7 +8,7 @@ import Ustensile from 'src/app/models/ustensile.model';
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
-  styleUrls: ['./card.component.scss']
+  styleUrls: ['./card.component.scss' ]
 })
 export class CardComponent {
 
