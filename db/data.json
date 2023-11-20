@@ -1239,6 +1239,30 @@
         "id": 4
       },
       "id": 167
+    },
+    {
+      "quantite": "10 cl",
+      "ingredient": {
+        "nom": "lait",
+        "id": 5
+      },
+      "id": 168
+    },
+    {
+      "quantite": "125 g",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 2
+      },
+      "id": 169
+    },
+    {
+      "quantite": "258 g",
+      "ingredient": {
+        "nom": "Farine",
+        "id": 4
+      },
+      "id": 170
     }
   ],
   "ingredients": [
@@ -1253,14 +1277,68 @@
     {
       "nom": "Farine",
       "id": 4
+    },
+    {
+      "nom": "lait",
+      "id": 5
     }
   ],
   "recettes": [
     {
       "nom": "Tropezienne",
-      "ustensiles": [],
-      "quantites": [],
+      "ustensiles": [
+        {
+          "nom": "bole",
+          "id": 3
+        },
+        {
+          "nom": "robot patissier",
+          "id": 2
+        }
+      ],
+      "quantites": [
+        {
+          "quantite": "125 g",
+          "ingredient": {
+            "nom": "Sucre",
+            "id": 2
+          },
+          "id": 169
+        },
+        {
+          "quantite": "258 g",
+          "ingredient": {
+            "nom": "Farine",
+            "id": 4
+          },
+          "id": 170
+        }
+      ],
       "id": 1
+    },
+    {
+      "nom": "Brioche sucré",
+      "ustensiles": [
+        {
+          "nom": "robot patissier",
+          "id": 2
+        },
+        {
+          "nom": "bole",
+          "id": 3
+        }
+      ],
+      "quantites": [
+        {
+          "quantite": "10 cl",
+          "ingredient": {
+            "nom": "lait",
+            "id": 5
+          },
+          "id": 168
+        }
+      ],
+      "id": 2
     }
   ]
 }
