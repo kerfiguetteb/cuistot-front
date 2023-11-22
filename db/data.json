@@ -7,6 +7,10 @@
     {
       "nom": "bole",
       "id": 3
+    },
+    {
+      "nom": "four",
+      "id": 4
     }
   ],
   "ingredientQuantites": [
@@ -1263,6 +1267,78 @@
         "id": 4
       },
       "id": 170
+    },
+    {
+      "quantite": "125 gramme",
+      "ingredient": {
+        "nom": "Sel",
+        "id": 3
+      },
+      "id": 171
+    },
+    {
+      "quantite": "125 gramme",
+      "ingredient": {
+        "nom": "lait",
+        "id": 5
+      },
+      "id": 172
+    },
+    {
+      "quantite": "125 gramme",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 2
+      },
+      "id": 173
+    },
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "lait",
+        "id": 5
+      },
+      "id": 174
+    },
+    {
+      "quantite": "125 cl",
+      "ingredient": {
+        "nom": "lait",
+        "id": 5
+      },
+      "id": 175
+    },
+    {
+      "quantite": "sqcqsc",
+      "ingredient": {
+        "nom": "test",
+        "id": 6
+      },
+      "id": 176
+    },
+    {
+      "quantite": "125 gramme",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 2
+      },
+      "id": 177
+    },
+    {
+      "quantite": "50cl",
+      "ingredient": {
+        "nom": "lait",
+        "id": 5
+      },
+      "id": 178
+    },
+    {
+      "quantite": "258g",
+      "ingredient": {
+        "nom": "test",
+        "id": 6
+      },
+      "id": 179
     }
   ],
   "ingredients": [
@@ -1271,16 +1347,12 @@
       "id": 2
     },
     {
-      "nom": "Sel",
-      "id": 3
-    },
-    {
-      "nom": "Farine",
-      "id": 4
-    },
-    {
       "nom": "lait",
       "id": 5
+    },
+    {
+      "nom": "test",
+      "id": 6
     }
   ],
   "recettes": [
@@ -1288,54 +1360,74 @@
       "nom": "Tropezienne",
       "ustensiles": [
         {
-          "nom": "bole",
-          "id": 3
-        },
-        {
           "nom": "robot patissier",
           "id": 2
+        },
+        {
+          "nom": "four",
+          "id": 4
         }
       ],
       "quantites": [
         {
-          "quantite": "125 g",
+          "quantite": "125 gramme",
           "ingredient": {
             "nom": "Sucre",
             "id": 2
           },
-          "id": 169
+          "id": 173
         },
         {
-          "quantite": "258 g",
+          "quantite": "sqcqsc",
           "ingredient": {
-            "nom": "Farine",
-            "id": 4
+            "nom": "test",
+            "id": 6
           },
-          "id": 170
+          "id": 176
         }
       ],
       "id": 1
     },
     {
-      "nom": "Brioche sucré",
+      "nom": "test",
       "ustensiles": [
-        {
-          "nom": "robot patissier",
-          "id": 2
-        },
         {
           "nom": "bole",
           "id": 3
+        },
+        {
+          "nom": "four",
+          "id": 4
+        },
+        {
+          "nom": "robot patissier",
+          "id": 2
         }
       ],
       "quantites": [
         {
-          "quantite": "10 cl",
+          "quantite": "125 gramme",
+          "ingredient": {
+            "nom": "Sucre",
+            "id": 2
+          },
+          "id": 177
+        },
+        {
+          "quantite": "50cl",
           "ingredient": {
             "nom": "lait",
             "id": 5
           },
-          "id": 168
+          "id": 178
+        },
+        {
+          "quantite": "258g",
+          "ingredient": {
+            "nom": "test",
+            "id": 6
+          },
+          "id": 179
         }
       ],
       "id": 2

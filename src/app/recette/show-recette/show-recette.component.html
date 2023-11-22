@@ -12,8 +12,12 @@
     </div>    
 
     <div class="text-end mt-3">
-        <span class="span-custom">Pour personnalisé la recette cliquée ici </span><button (click)="toggle()"
-            class=" btn-custom">+ </button>
+        <button (click)="toggle()"
+            class=" btn-custom">
+            Pour personnalisé la recette cliquée ici
+            <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
+            <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
+           </button>
     </div>
 
 
