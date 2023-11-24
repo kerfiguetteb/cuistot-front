@@ -1,9 +1,15 @@
 {
   "recettes": [
     {
-      "nom": "test",
+      "nom": "Tropezienne",
       "ustensiles": [],
       "quantites": [],
+      "etapes": [
+        {
+          "description": "test",
+          "id": 8
+        }
+      ],
       "id": 1
     }
   ],
@@ -11,14 +17,176 @@
     {
       "nom": "Sucre",
       "id": 1
+    },
+    {
+      "nom": "sel",
+      "id": 2
+    },
+    {
+      "nom": "levure chimique",
+      "id": 3
+    },
+    {
+      "nom": "lait",
+      "id": 4
+    },
+    {
+      "nom": "oeuf",
+      "id": 5
+    },
+    {
+      "nom": "farine",
+      "id": 6
     }
   ],
   "ustensiles": [
     {
       "nom": "Four",
       "id": 1
+    },
+    {
+      "nom": "bol",
+      "id": 2
     }
   ],
-  "ingredientQuantites": [],
-  "etapes": []
+  "ingredientQuantites": [
+    {
+      "quantite": "100g",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "quantite": "5g",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 2
+    },
+    {
+      "quantite": "1 sachet",
+      "ingredient": {
+        "nom": "levure chimique",
+        "id": 3
+      },
+      "id": 3
+    },
+    {
+      "quantite": "20cl",
+      "ingredient": {
+        "nom": "lait",
+        "id": 4
+      },
+      "id": 4
+    },
+    {
+      "quantite": "3",
+      "ingredient": {
+        "nom": "oeuf",
+        "id": 5
+      },
+      "id": 5
+    },
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "farine",
+        "id": 6
+      },
+      "id": 6
+    },
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 1
+      },
+      "id": 7
+    },
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "Sucre",
+        "id": 1
+      },
+      "id": 8
+    },
+    {
+      "quantite": "10g",
+      "ingredient": {
+        "nom": "sel",
+        "id": 2
+      },
+      "id": 9
+    },
+    {
+      "quantite": "1 sachet",
+      "ingredient": {
+        "nom": "levure chimique",
+        "id": 3
+      },
+      "id": 10
+    },
+    {
+      "quantite": "3",
+      "ingredient": {
+        "nom": "oeuf",
+        "id": 5
+      },
+      "id": 11
+    },
+    {
+      "quantite": "150",
+      "ingredient": {
+        "nom": "farine",
+        "id": 6
+      },
+      "id": 12
+    },
+    {
+      "quantite": "10cl",
+      "ingredient": {
+        "nom": "lait",
+        "id": 4
+      },
+      "id": 13
+    }
+  ],
+  "etapes": [
+    {
+      "description": "test",
+      "id": 1
+    },
+    {
+      "description": "test\n",
+      "id": 2
+    },
+    {
+      "description": "Dans le bol mettre la farine, la levure, le sucre, les œufs, le sel et le lait   ",
+      "id": 3
+    },
+    {
+      "description": "melanger le tout ezjkfhejlgfiezlfhcluiehc",
+      "id": 4
+    },
+    {
+      "description": "test\n",
+      "id": 5
+    },
+    {
+      "description": "test2\n",
+      "id": 6
+    },
+    {
+      "description": "dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc dsqfqesfvdvsevrdrvrv dfvidfhioeuh fkljbfjkhsc jkfhjekgckjezhc jkgfkjgfjebc ",
+      "id": 7
+    },
+    {
+      "description": "test",
+      "id": 8
+    }
+  ]
 }

@@ -2,11 +2,15 @@
 
     <h1 class="custom-h1"> <i class="bi bi-flower2"></i> {{recette.nom}}</h1>
     <div class="row">
-        <div *ngIf="recette.quantites.length > 0" class="col-md-6">
+        <div class="col-md-6">
             <app-table [detail]="'ingredientsQuantite'" [objects]="recette" (onObjects)="removeQuantite($event)"></app-table>
         </div>
-        <div *ngIf="recette.ustensiles.length > 0" class="col-md-6">
+        <div  class="col-md-6">
             <app-table [detail]="'ustensiles'" [objects]="recette" (onObjects)="removeUstensile($event)"></app-table>
+        </div>
+
+        <div *ngIf="recette.etapes.length > 0" class="mt-3">
+            <app-table [detail]="'etapes'" [objects]="recette" (onObjects)="removeUstensile($event)"></app-table>
         </div>
 
     </div>    
@@ -46,7 +50,7 @@
             </div>
             <div class="tab-pane" id="etape" role="tabpanel">
                 <div>
-                    <app-add-etape></app-add-etape>
+                    <app-add-etape (onEtape)="getEtape($event)"></app-add-etape>
                 </div>
             </div>
         </div>
