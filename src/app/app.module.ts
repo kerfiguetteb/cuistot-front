@@ -17,6 +17,8 @@ import { AddIngredientComponent } from './recette/show-recette/add-ingredient/ad
 import { ListIngredientComponent } from './recette/show-recette/list-ingredient/list-ingredient.component';
 import { ListUstensileComponent } from './recette/show-recette/list-ustensile/list-ustensile.component';
 import { ValidationMessageComponent } from './shared/component/validation-message/validation-message.component';
+import { AddEtapeComponent } from './recette/show-recette/add-etape/add-etape.component';
+import { ListEtapeComponent } from './recette/show-recette/list-etape/list-etape.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { ValidationMessageComponent } from './shared/component/validation-messag
     AddIngredientComponent,
     ListIngredientComponent,
     ListUstensileComponent,
-    ValidationMessageComponent
+    ValidationMessageComponent,
+    AddEtapeComponent,
+    ListEtapeComponent
   ],
 
   imports: [

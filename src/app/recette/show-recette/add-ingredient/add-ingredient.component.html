@@ -1,8 +1,7 @@
 <button class="btn-custom" (click)="toggle()"> Ajouter ingredient
   <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
   <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
-  
-  </button>
+</button>
 
 <div *ngIf="!hidden" class="mt-3">
     <form [formGroup]="ingredientForm" (ngSubmit)="onSubmit()">

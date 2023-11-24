@@ -11,13 +11,13 @@ export class AddIngredientComponent {
 
   constructor(private formBuilder: FormBuilder) {}
 
-  hidden: boolean = true
+  hidden: boolean = true;
   
   toggle() {
     this.hidden = !this.hidden;
   }
 
-  submitted: boolean = false
+  submitted: boolean = false;
 
 
   @Output()
