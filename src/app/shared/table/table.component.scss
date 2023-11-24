@@ -23,20 +23,31 @@ button{
 }
 .nom-custom{
     color: $primary;
-    font-size: large;
     font-weight: bold;
 }
 
-.card{
+.card, .table{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .custom-title-card {
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     font-family: Lora;
     margin: 20px;
     color: $secondary;
 }
+
+td{
+    padding: 15px;
+    color: $gray;
+    text-align: center;
+}
+
+.custom-numero{
+    font-size: x-large;
+    font-weight: bold;
+}
+
 
 
