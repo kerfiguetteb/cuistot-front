@@ -1,6 +1,6 @@
 <div *ngIf="recette" class="container mt-5">
 
-    <h1>{{recette.nom}}</h1>
+    <h1 class="custom-h1"> <i class="bi bi-flower2"></i> {{recette.nom}}</h1>
     <div class="row">
         <div *ngIf="recette.quantites.length > 0" class="col-md-6">
             <app-table [detail]="'ingredientsQuantite'" [objects]="recette" (onObjects)="removeQuantite($event)"></app-table>
@@ -12,8 +12,12 @@
     </div>    
 
     <div class="text-end mt-3">
-        <span class="span-custom">Pour personnalisé la recette cliquée ici </span><button (click)="toggle()"
-            class=" btn-custom">+ </button>
+        <button (click)="toggle()"
+            class=" btn-custom">
+            Pour personnalisé la recette cliquée ici
+            <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
+            <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
+           </button>
     </div>
 
 
@@ -25,6 +29,9 @@
             <li class="nav-item">
                 <a class="nav-link " data-bs-toggle="list" href="#ustensile" role="tab">Ustensiles</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link " data-bs-toggle="list" href="#etape" role="tab">Etapes</a>
+            </li>
         </ul>
         <div class="tab-content">
             <div class="tab-pane" id="ingredient" role="tabpanel">
@@ -35,6 +42,11 @@
             <div class="tab-pane" id="ustensile" role="tabpanel">
                 <div>
                     <app-list-ustensile [ustensiles]="ustensiles" [recette]="recette"></app-list-ustensile>
+                </div>
+            </div>
+            <div class="tab-pane" id="etape" role="tabpanel">
+                <div>
+                    <app-add-etape></app-add-etape>
                 </div>
             </div>
         </div>

@@ -50,7 +50,7 @@ button{
     border: none;
     color: #FFF;
     font-weight: 500;
-    border-radius: 25px !important;
+    border-radius: 15px !important;
     text-transform: uppercase;
     transition: 0.1s ease;
 }
@@ -59,6 +59,25 @@ button:hover, button:focus{
     opacity: 0.8;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transition: 0.1s ease;
+}
+
+textarea{
+    border-radius: 3px;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+	color: $gray;
+    transition: 0.2s ease;
+    border-bottom: 1px solid $gray;
+    outline: none;
+}
+
+textarea:focus{
+    border: none;
+    border-bottom: 2px solid $primary;
+    color: $gray;
+    transition: 0.2s ease;
 }
 
 

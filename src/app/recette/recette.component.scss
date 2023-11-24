@@ -1,6 +1,5 @@
 $primary: #c25700;
 $secondary: #4E0110;
-$info: #157a6e;
 $warning:#efb224; 
 $gray: #7e8280;
 
@@ -12,11 +11,17 @@ $gray: #7e8280;
 }
 
 .btn-custom{
-    border-radius: 50%;
-    background-color:$warning;
+    background-color: white;
+    color: $gray;
 }
 
 .span-custom{
     padding: 8px 15px;
     
 }
+
+.bloc-form{
+    margin: 25px;
+}
+
+

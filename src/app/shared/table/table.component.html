@@ -1,35 +1,46 @@
-  <!-- tableau ingredients-recette -->
+<!-- tableau ingredients-recette -->
 
 <div *ngIf="objects.quantites && detail === 'ingredientsQuantite'" class="card">
   <div class="card-body">
-      <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">quantiter</th>
-              <th scope="col">nom</th>
-              <th scope="col">action</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let ingredient of objects.quantites; let i = index ">
-              <th scope="row">{{i + 1}} </th>
-              <td>{{ingredient.quantite}}</td>
-              <td>{{ingredient.ingredient.nom}}</td>
-              <td><button (click)="event(ingredient)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
-            </tr>
-          </tbody>
-        </table>
+    <h3 class="custom-title-card">Ingredients</h3>
+
+    <ul>
+      <li *ngFor="let ingredient of objects.quantites;" class="bloc-li">
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-6"> <span class="quantite-custom">{{ingredient.quantite}} </span> <span
+              class="nom-custom">{{ingredient.ingredient.nom}} </span>
+          </div>
+          <div class=" col-md-2 text-end">
+            <button (click)="event(ingredient)"><i class="bi bi-trash3-fill text-danger"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
   </div>
 </div>
 
 
-  <!-- tableau ustensile -->
+<!-- tableau ustensile -->
 
 <div *ngIf="objects.ustensiles && detail === 'ustensiles'" class="card">
 
   <div class="card-body">
-      <table class="table">
+    <h3 class="custom-title-card">Ustensiles</h3>
+
+    <ul>
+      <li *ngFor="let ustensile of objects.ustensiles;" class="bloc-li">
+        <div class="row d-flex justify-content-between">
+          <div class="col-md-6"> <span class="nom-custom">{{ustensile.nom}} </span>
+          </div>
+          <div class=" col-md-2 text-end">
+            <button (click)="event(ustensile)"><i class="bi bi-trash3-fill text-danger"></i></button>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <table class="table">
           <thead>
             <tr>
               <th scope="col">#</th>
@@ -44,6 +55,5 @@
               <td><button (click)="event(ustensile)"><i class="bi bi-trash3-fill text-danger"></i></button></td>
             </tr>
           </tbody>
-        </table>
-  </div>
+        </table> -->
 </div>

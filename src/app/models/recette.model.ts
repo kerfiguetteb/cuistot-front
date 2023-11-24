@@ -1,4 +1,4 @@
-import Ingredient from "./ingredient.model";
+import Etape from "./etape.model";
 import IngredientQuantite from "./ingredientQuantite.model";
 import Ustensile from "./ustensile.model";
 
@@ -12,5 +12,6 @@ export default class Recette {
     prepartion!: number
     cuisson!: number
     repos!: number
+    etapes: Etape[] = []
 
 }
