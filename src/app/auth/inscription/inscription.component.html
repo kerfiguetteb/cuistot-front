@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row d-flex justify-content-around mt-5">
+        <div class=" img col-md-5">
+            <h3 class="title-custom">Avec le Cuistot, creez vos recettes et partager les avec d'autres cuistot
+            </h3>
+            <div class="img text-center mt-5">
+
+                <img src="../../assets/img/cooking.svg" class="img-fluid" alt="...">
+            </div>
+        </div>
+        <div class=" card-register col-md-5 p-5 ">
+            <form [formGroup]="registerForm">
+                <h1>Inscription</h1>
+                <p class="para-custom"> <strong>C'est gratuit</strong> (et ça ne mange pas de pain) </p>
+                <div class="mb-3 mt-4">
+                    <input type="text" name="fullName" formControlName="fullName" placeholder="ex: John Doe"
+                        aria-label="Username" aria-describedby="basic-addon1">
+
+                    <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
+                        <div *ngIf="fullName.errors?.['required']">nom d'utilisateur requis!</div>
+                        <div *ngIf="fullName.errors?.['fullName']">Entrez un nom d'utilisateur valide!</div>
+                    </small>
+
+                </div>
+                <div class="mb-3">
+                    <input type="email" name="email" formControlName="email" id="exampleInputEmail1"
+                    placeholder="ex: john@doe.com"
+                        aria-describedby="emailHelp">
+
+                    <small *ngIf="email.invalid && (email.dirty || email.touched)">
+                        <div *ngIf="email.errors?.['required']">email requis!</div>
+                        <div *ngIf="email.errors?.['email']">l'email' n'est pas valide!</div>
+                    </small>
+
+                </div>
+                <div class="mb-3">
+                    <input type="password" name="password" formControlName="password" 
+                    placeholder="Entrez votre mot de passe"
+                    id="exampleInputPassword1">
+                    <small *ngIf="password.invalid && (password.dirty || password.touched)">
+                        <div *ngIf="password.errors?.['required']">mot de passe requis!</div>
+                        <!-- <div *ngIf="password.errors?.['password']" >le mot de passe n'est pas valide!</div> -->
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <input type="password" placeholder="Repetez le mot de passe" name="confirmPassword"
+                        formControlName="confirmPassword" id="exampleInputPassword1"
+                        placeholder="Repetez votre mot de passe"
+
+                        >
+                    <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
+                        <div *ngIf="confirmPassword.errors?.['required']">Confirmez le mot de passe </div>
+                    </small>
+                    <small
+                        *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid ">
+                        le mot de passe n'est pas identique
+                    </small>
+                </div>
+                <div class="d-grid gap-2 pt-3 ">
+                    <button type="submit" [disabled]="registerForm.invalid" class="btn-custom">Submit</button>
+
+                </div>
+
+            </form>
+            <div class="btn-connexion">
+
+                <a routerLink="/connexion">Connectez-vous</a>
+            </div>
+
+        </div>
+
+    </div>
