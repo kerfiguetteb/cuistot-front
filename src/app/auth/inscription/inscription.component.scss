@@ -27,11 +27,6 @@ h3{
     color: #fff;
 }
 
-.card-register{
-    background-color: #7e828016;
-    border-radius:  8px;
-
-}
 
 small{
     color: $primary;
@@ -39,7 +34,7 @@ small{
 
 
 h1{
-    color: $primary;
+    color: $primary !important;
     text-align: center;
 }
 
@@ -57,3 +52,5 @@ a{
     font-size: large;
     font-weight: 300;
 }
+
+

@@ -1,0 +1,57 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c3d;
+
+
+.active{
+    color: $primary !important;
+    border-bottom: 3px solid $primary;
+}
+
+.nav-link{
+    font-size: large;
+
+}
+
+.nav-link:hover{
+    color: $primary !important;
+    border-bottom: 3px solid $primary;
+}
+
+.navbar{
+    padding: 0% !important;
+    margin: 0% !important;
+}
+
+.collapse{
+    margin: 0% !important;
+    // height: max-content;
+}
+
+.btn-bloc{
+    margin-left: 35px;
+    border-left: 3px solid $primary;
+}
+
+.btn-connexion{
+    color: $primary !important;
+    border: none;
+    padding: 10px;
+
+}
+
+.icon-login{
+    color: $primary;
+    padding: 10px;
+}
+.btn-search{
+    border: none;
+}
+
+
+
+
+
+

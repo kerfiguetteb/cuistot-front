@@ -21,6 +21,8 @@ import { AddEtapeComponent } from './recette/show-recette/add-etape/add-etape.co
 import { ListEtapeComponent } from './recette/show-recette/list-etape/list-etape.component';
 import { ConnexionComponent } from './auth/connexion/connexion.component';
 import { InscriptionComponent } from './auth/inscription/inscription.component';
+import { AuthComponent } from './auth/auth.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { InscriptionComponent } from './auth/inscription/inscription.component';
     AddEtapeComponent,
     ListEtapeComponent,
     ConnexionComponent,
-    InscriptionComponent
+    InscriptionComponent,
+    AuthComponent,
+    HomeComponent
   ],
 
   imports: [
