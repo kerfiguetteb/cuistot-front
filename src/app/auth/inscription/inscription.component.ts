@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { passwordMatchValidator } from 'src/app/shared/password-match.directive';
 
 
@@ -20,7 +21,19 @@ export class InscriptionComponent {
   }
   )
 
-  constructor( private fb: FormBuilder ){}
+  @Input()
+  message!: boolean
+
+  @Output()
+  onMessage: EventEmitter<boolean> = new EventEmitter()
+  
+
+  add(){
+    this.message = true
+    this.onMessage.emit(this.message)    
+  }
+
+  constructor( private fb: FormBuilder, private router: Router ){}
 
   get fullName(){
     return this.registerForm.controls['fullName'];

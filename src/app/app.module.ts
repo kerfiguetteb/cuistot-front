@@ -23,6 +23,9 @@ import { ConnexionComponent } from './auth/connexion/connexion.component';
 import { InscriptionComponent } from './auth/inscription/inscription.component';
 import { AuthComponent } from './auth/auth.component';
 import { HomeComponent } from './home/home.component';
+import { CarousselComponent } from './home/caroussel/caroussel.component';
+import { MarketingComponent } from './home/marketing/marketing.component';
+import { FeaturettesComponent } from './home/featurettes/featurettes.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { HomeComponent } from './home/home.component';
     ConnexionComponent,
     InscriptionComponent,
     AuthComponent,
-    HomeComponent
+    HomeComponent,
+    CarousselComponent,
+    MarketingComponent,
+    FeaturettesComponent
   ],
 
   imports: [

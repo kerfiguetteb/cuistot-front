@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AuthComponent {
 
+  message: boolean = false
+
+  messageEvent(message: boolean){
+    this.message = message
+  }
 }

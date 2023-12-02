@@ -47,7 +47,7 @@
                     </small>
                 </div>
                 <div class="d-grid gap-2 pt-3">
-                    <button type="submit" [disabled]="registerForm.invalid" class="btn-custom mb-5">Submit</button>
+                    <button type="submit" [disabled]="registerForm.invalid" (click)="add()" class="btn-custom mb-5">Submit</button>
 
                 </div>
 

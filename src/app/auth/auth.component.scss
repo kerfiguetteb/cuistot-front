@@ -1,6 +1,6 @@
 $primary: #c25700;
 $secondary: #4E0110;
-$info: #1c9496;
+$info: #1c9632;
 $warning:#efb224; 
 $gray: #777978;
 
@@ -32,5 +32,12 @@ $gray: #777978;
 
 .title-custom{
     text-align: center;
+    font-weight: 400;
+}
+
+.alert{
+    border-left: 5px solid $info;
+    padding: 35px;
+    background-color: #1c963235;
     font-weight: 400;
 }
