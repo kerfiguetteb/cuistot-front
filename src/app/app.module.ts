@@ -19,6 +19,14 @@ import { ListUstensileComponent } from './recette/show-recette/list-ustensile/li
 import { ValidationMessageComponent } from './shared/component/validation-message/validation-message.component';
 import { AddEtapeComponent } from './recette/show-recette/add-etape/add-etape.component';
 import { ListEtapeComponent } from './recette/show-recette/list-etape/list-etape.component';
+import { ConnexionComponent } from './auth/connexion/connexion.component';
+import { InscriptionComponent } from './auth/inscription/inscription.component';
+import { AuthComponent } from './auth/auth.component';
+import { HomeComponent } from './home/home.component';
+import { CarousselComponent } from './home/caroussel/caroussel.component';
+import { MarketingComponent } from './home/marketing/marketing.component';
+import { FeaturettesComponent } from './home/featurettes/featurettes.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +44,15 @@ import { ListEtapeComponent } from './recette/show-recette/list-etape/list-etape
     ListUstensileComponent,
     ValidationMessageComponent,
     AddEtapeComponent,
-    ListEtapeComponent
+    ListEtapeComponent,
+    ConnexionComponent,
+    InscriptionComponent,
+    AuthComponent,
+    HomeComponent,
+    CarousselComponent,
+    MarketingComponent,
+    FeaturettesComponent,
+    ProfileComponent
   ],
 
   imports: [

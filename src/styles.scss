@@ -1,4 +1,4 @@
-$primary: #c25700;
+$primary-color: #c25700;
 $secondary: #4E0110;
 $info: #157a6e;
 $warning:#efb224; 
@@ -25,41 +25,34 @@ h2 h3 h4 h5 h6 {
     font-family: Lora;
 }
 
-input[type="text"]{
-    border-radius: 3px;
-    padding: 15px;
-    width: 100%;
+input{
+    display: block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
     border: none;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; 
     font-size: 16px;
-	color: $gray;
     transition: 0.2s ease;
     border-bottom: 1px solid $gray;
     outline: none;
 }
 
-input[type="text"]:focus{
+input:focus{
     border: none;
-    border-bottom: 2px solid $primary;
-    color: $primary;
+    border-bottom: 2px solid $primary-color;
+    color: $primary-color;
     transition: 0.2s ease;
 }
 
-button{
-    padding: 10px 15px;
-    background: $secondary;
+.btn-warning{
+    background: $secondary !important;
     border: none;
-    color: #FFF;
-    font-weight: 500;
-    border-radius: 15px !important;
-    text-transform: uppercase;
-    transition: 0.1s ease;
+    color: #fff !important;
 }
 
-button:hover, button:focus{
-    opacity: 0.8;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-    transition: 0.1s ease;
-}
 
 textarea{
     border-radius: 3px;
@@ -75,7 +68,7 @@ textarea{
 
 textarea:focus{
     border: none;
-    border-bottom: 2px solid $primary;
+    border-bottom: 2px solid $primary-color;
     color: $gray;
     transition: 0.2s ease;
 }

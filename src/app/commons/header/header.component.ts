@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  hidden: boolean = true
+  
+  toggle() {
+    this.hidden = !this.hidden;
+  }
+
 }

@@ -1,0 +1,43 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9632;
+$warning:#efb224; 
+$gray: #777978;
+
+
+.card-register{
+    background-color: #7e828035 !important;
+    border: none;
+    border-radius: 15px;
+}
+
+.nav{
+    border: none;
+}
+
+.nav-link{
+    width: 50%;
+    color: $gray !important;
+    border: none;
+    padding: 15px;
+    font-size: large;
+}
+
+.active{
+    color: $primary !important ;
+    border: none;
+    font-weight: bolder;
+
+}
+
+.title-custom{
+    text-align: center;
+    font-weight: 400;
+}
+
+.alert{
+    border-left: 5px solid $info;
+    padding: 35px;
+    background-color: #1c963235;
+    font-weight: 400;
+}

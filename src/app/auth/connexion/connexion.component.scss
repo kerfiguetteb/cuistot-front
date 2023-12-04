@@ -1,0 +1,82 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c3d;
+
+
+label{
+    color: #585858;
+    font-size: larger;
+}
+
+
+small{
+    color: $primary;
+}
+
+.btn-custom{
+    background: $primary;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    padding: 8px;
+
+}
+
+.btn-custom:disabled{
+    background: #c2570082;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}
+
+span{
+    text-align: center;
+    font-size: large;
+    margin-top: 15px;
+    font-weight: lighter;
+
+    
+}
+
+
+.section-connexion{
+    background-color: #7e828016;
+    border-radius:  0 15px 15px 0;
+}
+
+.title{
+    color: $primary;
+    font-size: xx-large;
+}
+
+.bi{
+    width: 100%;
+    height: max-content;
+}
+
+.bloc-logo {
+    margin: 20px 0px;
+}
+
+.img-fluid{
+    height: 100% !important;
+}
+
+
+a{
+    text-decoration: none;
+    color: $info;
+    font-weight: 300;
+}
+
+.password-forget{
+    font-size: medium !important;
+    font-weight: 300;
+    margin-left: 10px;
+}
+
+
+
+

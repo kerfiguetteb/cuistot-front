@@ -1,0 +1,21 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c3d;
+
+.featurette-divider {
+    margin: 5rem 0;
+    color: $primary; 
+
+  }
+  
+  /* Thin out the marketing headings */
+  /* rtl:begin:remove */
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+
+  hr{
+    padding: 10px;
+  }

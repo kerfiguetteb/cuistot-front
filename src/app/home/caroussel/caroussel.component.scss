@@ -1,0 +1,30 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c3d;
+
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+  }
+
+  .carousel-item {
+    height: 32rem;
+  }
+
+  .carousel {
+    margin-bottom: 4rem;
+  }
+
+  .btn-primary{
+    background: $secondary !important;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    padding: 8px !important;
+
+}
+
+
