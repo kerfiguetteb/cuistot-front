@@ -1,4 +1,4 @@
-<form class="m-5" [formGroup]="registerForm">
+<form class="m-5" [formGroup]="registerForm" (submit)="add()">
                  <h1>Inscription</h1>
                 <p class="para-custom"> <strong>C'est gratuit</strong> (et ça ne mange pas de pain) </p>
                 <div class="mb-3 mt-4">
@@ -47,7 +47,7 @@
                     </small>
                 </div>
                 <div class="d-grid gap-2 pt-3">
-                    <button type="submit" [disabled]="registerForm.invalid" (click)="add()" class="btn-custom mb-5">Submit</button>
+                    <button type="submit" [disabled]="registerForm.invalid" class="btn-custom mb-5">Submit</button>
 
                 </div>
 

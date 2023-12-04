@@ -1,5 +1,5 @@
 
-            <form class="m-5" [formGroup]="loginform">
+            <form class="m-5" [formGroup]="loginForm" (submit)="getUser()">
                 <div class="header-title text-center mt-3 ">
                     <h1 class="title">Connectez-vous</h1>
                     <div class="bloc-logo row d-flex justify-content-center">
@@ -54,6 +54,6 @@
                 </div>
 
                 <div class="d-grid gap-2 pt-3 ">
-                    <button type="submit" [disabled]="loginform.invalid" routerLink="/recettes" class="btn-custom mb-5">Submit</button>
+                    <button type="submit" [disabled]="loginForm.invalid" class="btn-custom mb-5">Submit</button>
                 </div>
             </form>

@@ -26,6 +26,7 @@ import { HomeComponent } from './home/home.component';
 import { CarousselComponent } from './home/caroussel/caroussel.component';
 import { MarketingComponent } from './home/marketing/marketing.component';
 import { FeaturettesComponent } from './home/featurettes/featurettes.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { FeaturettesComponent } from './home/featurettes/featurettes.component';
     HomeComponent,
     CarousselComponent,
     MarketingComponent,
-    FeaturettesComponent
+    FeaturettesComponent,
+    ProfileComponent
   ],
 
   imports: [

@@ -12,4 +12,5 @@ export class AuthComponent {
   messageEvent(message: boolean){
     this.message = message
   }
+
 }
