@@ -1,3 +1,5 @@
-<h1 *ngIf="session" > Bonjour {{session['fullName']}}</h1>
-
-<button (click)="logOut()"></button>
+<div class="container">
+    <app-profile-detail [user]="user"></app-profile-detail>
+    <h2>Mes recettes</h2>
+    <h2>Mes cuistot que je suis</h2>
+</div>

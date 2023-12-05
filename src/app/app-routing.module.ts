@@ -9,7 +9,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { authGuard } from './guards/auth.guard';
 const routes: Routes = [
 
-  {path: 'recettes', component: RecetteComponent},
+  {path: 'recettes', component: RecetteComponent, canActivate:[authGuard]},
   {path: 'show/:type', component: ShowRecetteComponent},
   {path: 'show/:type/:id', component: ShowRecetteComponent},
   {path: 'home', component: HomeComponent},

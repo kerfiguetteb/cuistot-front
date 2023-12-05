@@ -1,0 +1,67 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c;
+
+
+.nav-link{
+    font-size: medium;
+
+}
+
+.offcanvas-title{
+    font-size: x-large;
+    font-weight: 400;
+}
+
+.nav-link:hover{
+    color: $primary !important;
+}
+
+.btn-close{
+    background-color: $primary !important;
+}
+
+.navbar, .offcanvas{
+    padding: 0% !important;
+    margin: 0% !important;
+    box-shadow: 0 2px 4px rgba(6, 6, 6, 0.771);
+    background-color: rgba(6, 6, 6, 0.771) !important
+
+}
+
+.navbar-brand{
+    color: #fff !important;
+}
+
+.name-user{
+    color: $primary;
+}
+
+ .navbar-toggler:hover{
+    background-color: $primary !important;
+}
+
+.btn-custom{
+    background: none;
+    border-radius: 5px;
+    border: 2px solid $primary;
+    color: $primary;
+    padding: 5px 8px;
+    font-size: small;
+
+}
+.btn-custom:hover{
+        background: $primary;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+
+}
+
+.active{
+    color: $primary !important;
+}
+
+

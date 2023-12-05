@@ -27,6 +27,9 @@ import { CarousselComponent } from './home/caroussel/caroussel.component';
 import { MarketingComponent } from './home/marketing/marketing.component';
 import { FeaturettesComponent } from './home/featurettes/featurettes.component';
 import { ProfileComponent } from './profile/profile.component';
+import { NavbarProfileComponent } from './commons/header/navbar-profile/navbar-profile.component';
+import { NavbarVisiteurComponent } from './commons/header/navbar-visiteur/navbar-visiteur.component';
+import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +55,10 @@ import { ProfileComponent } from './profile/profile.component';
     CarousselComponent,
     MarketingComponent,
     FeaturettesComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavbarProfileComponent,
+    NavbarVisiteurComponent,
+    ProfileDetailComponent
   ],
 
   imports: [

@@ -16,6 +16,12 @@
       "password": "123",
       "fullName": "outman kerfi",
       "id": 2
+    },
+    {
+      "email": "sou@mia.fr",
+      "password": "123",
+      "fullName": "soumia la belle",
+      "id": 3
     }
   ]
 }

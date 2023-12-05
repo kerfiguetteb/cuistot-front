@@ -1,6 +1,10 @@
 
+            
             <form class="m-5" [formGroup]="loginForm" (submit)="getUser()">
                 <div class="header-title text-center mt-3 ">
+                    <div *ngIf="error || errorlogin" class="alert alert-danger" role="alert">
+                        {{message}}
+                      </div>                      
                     <h1 class="title">Connectez-vous</h1>
                     <div class="bloc-logo row d-flex justify-content-center">
                         <div class="col-md-1 m-1">
