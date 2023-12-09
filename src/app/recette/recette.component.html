@@ -1,6 +1,6 @@
 
 <div class="container">
-  <h1 class="custom-h1"> <i class="bi bi-flower2"></i> les recettes</h1>
+  <h1 class="custom-h1">mes recettes</h1>
   <app-validation-message [message]="message"></app-validation-message>
   <div class="row d-flex justify-content-center">
     <div class="text-end mt-3">
@@ -13,13 +13,30 @@
   </div>
 
   <div class="bloc-form">
-
     <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
   </div>
 
 
-      <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
+      <!-- <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
         <app-card [detail]="'recette'" [object]="recette" (onRemoveObject)="remove($event)" ></app-card>
-      </div>
+      </div> -->
   </div>
-  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">nom</th>
+        <th scope="col">nb ingredient</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recette of user.recettes" class="tb-hover">
+        <td>{{recette.nom}}</td>
+        <td>{{recette.quantites.length}}</td>
+        <td>
+          <button routerLink="/show/recettes/{{recette.id}}"><i class="bi bi-eye-fill"></i></button>
+          <button (click)="remove(recette)"><i class="bi bi-trash3-fill text-danger"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { authGuard } from 'src/app/guards/auth.guard';
+
 
 @Component({
   selector: 'app-header',
@@ -7,10 +9,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
-  hidden: boolean = true
-  
-  toggle() {
-    this.hidden = !this.hidden;
+  get session(){
+    return sessionStorage
   }
 
 }

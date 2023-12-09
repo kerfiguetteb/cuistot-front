@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RecetteService } from '../service/recette.service';
 import Recette from '../models/recette.model';
+import { User } from '../models/user.model';
+import { UserService } from '../service/user.service';
 
 @Component({
   selector: 'app-recette',
@@ -9,11 +11,13 @@ import Recette from '../models/recette.model';
 })
 export class RecetteComponent implements OnInit {
 
-  constructor(private recettesService: RecetteService) { }
+  constructor(private recettesService: RecetteService, private userService: UserService) { }
 
   recettes!: Recette[]
 
   message!: boolean
+
+  user!: User
 
 
   hidden: boolean = true
@@ -22,9 +26,6 @@ export class RecetteComponent implements OnInit {
     this.hidden = !this.hidden;
   }
 
-  /**
-   * fermer la fenetre du message
-   */
 
 
   /**
@@ -36,6 +37,11 @@ export class RecetteComponent implements OnInit {
     // on filtres la recette qui vien d'etre supprimer dans le tableau recettes
     const recetteFilter = this.recettes.filter((object => object.id !== recette.id))
     this.recettes = recetteFilter
+
+    const recetteUserFilter = this.user.recettes.filter((object => object.id !== recette.id))
+    this.user.recettes = recetteUserFilter
+
+    this.updateRecetteOfUser(this.user)
 
   }
 
@@ -56,7 +62,11 @@ export class RecetteComponent implements OnInit {
   private create(recette: Recette): void {
     this.recettesService.createRecette(recette).subscribe((recette) => {
       this.recettes.push(recette);
+      this.user.recettes.unshift(recette)
+      this.userService.updateUser(this.user).subscribe()
     });
+
+
   }
 
   /**
@@ -65,10 +75,21 @@ export class RecetteComponent implements OnInit {
    */
   private delete(recette: Recette): void {
     this.recettesService.deleteRecette(recette.id).subscribe()
+
+  }
+
+  /**
+   * suppression de la recette de l'utilisateur
+   * @param user 
+   */
+  private updateRecetteOfUser(user: User){
+    this.userService.updateUser(user).subscribe()
   }
 
 
   ngOnInit(): void {
+
+    this.userService.getUser(+sessionStorage['id']).subscribe((user)=>{this.user = user})
     this.recettesService.getRecettes().subscribe((recettes) => {
       this.recettes = recettes;
     })

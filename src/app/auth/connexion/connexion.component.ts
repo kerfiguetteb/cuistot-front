@@ -16,6 +16,10 @@ export class ConnexionComponent {
     password: ['', [Validators.required]]
   })
 
+  errorlogin!: boolean
+  error!: boolean
+  message!: string
+
   constructor(
     private fb: FormBuilder,
     private authService: AuthService,
@@ -43,13 +47,16 @@ export class ConnexionComponent {
         if (response.length > 0 && response[0].password === password) {
           sessionStorage.setItem('email', email as string);
           sessionStorage.setItem('fullName', response[0].fullName)
+          sessionStorage.setItem('id', response[0].id.toString())
           this.router.navigate(['profile'])
         } else {
-          console.log("email ou mot de passe incorrect");
+          this.errorlogin = true
+          this.message = "email ou mot de passe incorrect";
         }
       },
       error => {
-        console.log("quelque chose c'est mal passer");
+        this.error = true
+        this.message = "quelque chose c'est mal passer";
       }
 
     )
