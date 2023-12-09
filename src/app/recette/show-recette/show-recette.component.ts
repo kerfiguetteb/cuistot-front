@@ -54,7 +54,7 @@ export class ShowRecetteComponent implements OnInit {
     if (id && type === 'recettes') {
       this.subscribeRecette(+id)
     } else if (!id || !type) {
-      this.router.navigate(['/recettes'])
+      this.router.navigate(['/profile'])
     }
   }
 
@@ -164,6 +164,8 @@ export class ShowRecetteComponent implements OnInit {
 
   ngOnInit(): void {
     const type = this.route.snapshot.paramMap.get('type');
+    console.log(type);
+    
     const id = this.route.snapshot.paramMap.get('id');
     this.setSubscribe(type, id)
 

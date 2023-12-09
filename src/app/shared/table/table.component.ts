@@ -1,6 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import IngredientQuantite from 'src/app/models/ingredientQuantite.model';
-import Recette from 'src/app/models/recette.model';
 import Ustensile from 'src/app/models/ustensile.model';
 
 @Component({

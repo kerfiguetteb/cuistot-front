@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Recette from 'src/app/models/recette.model';
-import { RecetteService } from 'src/app/service/recette.service';
 
 @Component({
   selector: 'app-add-recette',

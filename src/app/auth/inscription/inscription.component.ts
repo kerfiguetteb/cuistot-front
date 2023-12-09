@@ -14,10 +14,11 @@ import { passwordMatchValidator } from 'src/app/shared/password-match.directive'
 export class InscriptionComponent {
   
   registerForm = this.fb.group({
+    fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
     email: ['', [Validators.required,Validators.email]],
     password: ['', [Validators.required]],
     confirmPassword: ['', Validators.required],
-    fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    recettes:[[]]
   },{
     validators: passwordMatchValidator
   }
@@ -61,15 +62,10 @@ export class InscriptionComponent {
   private submitDetails() {
     const postData = { ...this.registerForm.value };
     delete postData.confirmPassword;
-    this.authService.registerUser(postData as User).subscribe(
+    this.authService.registerUser(postData as unknown as User).subscribe(
       response => {
         console.log(response);
-        // this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Register successfully' });
-        // this.router.navigate(['auth'])
       },
-      error => {
-        // this.messageService.add({ severity: 'error', summary: 'Error', detail: 'Something went wrong' });
-      }
     )
   }
 

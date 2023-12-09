@@ -30,6 +30,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { NavbarProfileComponent } from './commons/header/navbar-profile/navbar-profile.component';
 import { NavbarVisiteurComponent } from './commons/header/navbar-visiteur/navbar-visiteur.component';
 import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.component';
+import { MesRecettesComponent } from './profile/mes-recettes/mes-recettes.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.
     ProfileComponent,
     NavbarProfileComponent,
     NavbarVisiteurComponent,
-    ProfileDetailComponent
+    ProfileDetailComponent,
+    MesRecettesComponent
   ],
 
   imports: [

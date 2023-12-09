@@ -2,26 +2,42 @@ $primary: #c25700;
 $secondary: #4E0110;
 $warning:#efb224; 
 $gray: #7e8280;
+$info: #157a6e;
+
 
 
 .custom-h1{
     margin-top: 50px;
     margin-bottom: 50px;
     color: $secondary;
+    font-weight: 800;
+    font-size: x-large;
 }
 
 .btn-custom{
-    background-color: white;
-    color: $gray;
+    background-color: #fff;
+    border: none;
+    font-weight: 400;
+    color: $primary;
+
 }
 
-.span-custom{
-    padding: 8px 15px;
-    
+
+.bi-caret-down-fill{
+    color: $primary;
 }
 
 .bloc-form{
     margin: 25px;
+}
+
+button{
+    border: none;
+    background-color: #fff;
+}
+.bi-eye-fill{
+    color: $info;
+    margin-right: 10px;
 }
 
 

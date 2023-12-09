@@ -1,27 +1,53 @@
 {
-  "recettes": [],
-  "ingredients": [],
+  "recettes": [
+    {
+      "nom": "Test",
+      "ustensiles": [],
+      "quantites": [],
+      "etapes": [],
+      "id": 1
+    }
+  ],
+  "ingredients": [
+    {
+      "nom": "sucre",
+      "id": 1
+    }
+  ],
   "ustensiles": [],
-  "ingredientQuantites": [],
+  "ingredientQuantites": [
+    {
+      "quantite": "150g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 1
+      },
+      "id": 1
+    }
+  ],
   "etapes": [],
   "users": [
     {
+      "fullName": "John doe",
       "email": "john@doe.fr",
       "password": "123",
-      "fullName": "John Doe",
+      "recettes": [
+        {
+          "nom": "test",
+          "ustensiles": [],
+          "quantites": [],
+          "etapes": [],
+          "id": 4
+        },
+        {
+          "nom": "wxcw<cs<qc",
+          "ustensiles": [],
+          "quantites": [],
+          "etapes": [],
+          "id": 2
+        }
+      ],
       "id": 1
-    },
-    {
-      "email": "out@man.fr",
-      "password": "123",
-      "fullName": "outman kerfi",
-      "id": 2
-    },
-    {
-      "email": "sou@mia.fr",
-      "password": "123",
-      "fullName": "soumia la belle",
-      "id": 3
     }
   ]
 }
