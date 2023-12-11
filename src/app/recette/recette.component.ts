@@ -3,6 +3,7 @@ import { RecetteService } from '../service/recette.service';
 import Recette from '../models/recette.model';
 import { User } from '../models/user.model';
 import { UserService } from '../service/user.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-recette',
@@ -10,22 +11,27 @@ import { UserService } from '../service/user.service';
   styleUrls: ['./recette.component.scss']
 })
 export class RecetteComponent implements OnInit {
+[x: string]: any;
 
-  constructor(private recettesService: RecetteService, private userService: UserService) { }
+  constructor(
+    private recettesService: RecetteService,
+    private userService: UserService,
+    private formBuilder: FormBuilder
+    ) { }
 
-  recettes!: Recette[]
+  recettes!: Recette[];
+  message!: boolean;
+  user!: User;
+  hidden: boolean = true;
 
-  message!: boolean
+  form = {
+    search: ''
+  }
 
-  user!: User
-
-
-  hidden: boolean = true
   
   toggle() {
     this.hidden = !this.hidden;
   }
-
 
 
   /**

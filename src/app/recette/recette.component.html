@@ -1,26 +1,29 @@
-
 <div class="container">
   <h1 class="custom-h1">mes recettes</h1>
   <app-validation-message [message]="message"></app-validation-message>
   <div class="row d-flex justify-content-center">
     <div class="text-end mt-3">
-      <button (click)="toggle()"
-          class=" btn-custom">
-          Pour ajouter une recette cliqué ici 
-          <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
-          <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
-        </button>
-  </div>
+      <button (click)="toggle()" class=" btn-custom">
+        Pour ajouter une recette cliqué ici
+        <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
+        <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
+      </button>
+    </div>
 
-  <div class="bloc-form">
-    <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
-  </div>
+    <div class="bloc-form">
+      <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
+    </div>
 
 
-      <!-- <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
+    <!-- <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
         <app-card [detail]="'recette'" [object]="recette" (onRemoveObject)="remove($event)" ></app-card>
       </div> -->
   </div>
+
+  <form #f="ngForm">
+    <input type="search" name="search" [(ngModel)]="form.search" id="search" #search="ngModel" class=" mb-3"
+      placeholder="Recherche">
+  </form>
   <table class="table">
     <thead>
       <tr>
@@ -30,10 +33,10 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let recette of user.recettes" class="tb-hover">
-        <td>{{recette.nom}}</td>
-        <td>{{recette.quantites.length}}</td>
-        <td>
+      <tr *ngFor="let recette of user.recettes;" class="tb-hover">
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">{{recette.nom}}</td>
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">{{recette.quantites.length}}</td>
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">
           <button routerLink="/show/recettes/{{recette.id}}"><i class="bi bi-eye-fill"></i></button>
           <button (click)="remove(recette)"><i class="bi bi-trash3-fill text-danger"></i></button>
         </td>

@@ -32,5 +32,9 @@ export class RecetteService {
     return this.httpClient.delete<Recette>(`${this.apiUrl}/recettes/${id}`)
   }
 
+  filterByName(name: string): Observable<Recette[]>{
+    return this.httpClient.get<Recette[]>(`${this.apiUrl}/recettes?nom=${name}`)
+  }
+
   
 }
