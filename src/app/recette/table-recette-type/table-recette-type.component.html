@@ -1,0 +1,27 @@
+<form #f="ngForm">
+    <input type="search" name="search" [(ngModel)]="form.search" id="search" #search="ngModel" class=" col-md-4 mb-3"
+      placeholder="Recherche">
+  </form>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">nom</th>
+        <th scope="col">nb ingredient</th>
+        <th scope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let recette of recettes.reverse();" class="tb-hover">
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">{{recette.nom}}</td>
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">{{recette.quantites.length}}</td>
+        <td *ngIf="recette.nom.toLocaleLowerCase().includes(form.search.toLocaleLowerCase())">
+            <button routerLink="/show/recettes/{{recette.id}}"><i class="bi bi-eye-fill"></i></button>
+          <button 
+          (click)="remove(recette)"
+
+          ><i class="bi bi-trash3-fill text-danger"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+

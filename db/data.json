@@ -1,38 +1,34 @@
 {
   "recettes": [
     {
-      "nom": "Test",
-      "ustensiles": [],
+      "nom": "Tropezienne",
+      "type": "sucrée",
+      "user_id": 1,
       "quantites": [],
+      "ustensiles": [],
       "etapes": [],
       "id": 1
-    }
-  ],
-  "ingredients": [
+    },
     {
-      "nom": "sucre",
-      "id": 1
+      "nom": "Brioche saléé",
+      "type": "salée",
+      "user_id": 1,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [],
+      "id": 2
     }
   ],
-  "ustensiles": [],
-  "ingredientQuantites": [
-    {
-      "quantite": "150g",
-      "ingredient": {
-        "nom": "sucre",
-        "id": 1
-      },
-      "id": 1
-    }
-  ],
-  "etapes": [],
   "users": [
     {
-      "fullName": "John doe",
-      "email": "john@doe.fr",
+      "fullName": "outman kerfi",
+      "email": "out@man.fr",
       "password": "123",
-      "recettes": [],
       "id": 1
     }
-  ]
+  ],
+  "ingredientQuantites": [],
+  "ustensiles": [],
+  "ingredients": [],
+  "etapes": []
 }

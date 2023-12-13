@@ -53,6 +53,24 @@ input:focus{
     color: #fff !important;
 }
 
+select{
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    transition: 0.2s ease;
+    border-bottom: 1px solid $gray;
+    outline: none;
+}
+
+select:focus{
+    border: none;
+    border-bottom: 2px solid $primary-color;
+    color: $gray;
+    transition: 0.2s ease;
+}
 
 textarea{
     border-radius: 3px;

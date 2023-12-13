@@ -22,10 +22,13 @@ export class RecetteComponent implements OnInit {
   recettes!: Recette[];
   message!: boolean;
   user!: User;
+  recetteSucrer!: Recette[]
+  recetteSaler!: Recette[]
   hidden: boolean = true;
 
-  form = {
-    search: ''
+  recetteType = {
+    sucrer : 'sucrée',
+    saler: 'salée'
   }
 
   
@@ -40,16 +43,29 @@ export class RecetteComponent implements OnInit {
    */
   public remove(recette: Recette): void {
     this.delete(recette)
+
     // on filtres la recette qui vien d'etre supprimer dans le tableau recettes
     const recetteFilter = this.recettes.filter((object => object.id !== recette.id))
     this.recettes = recetteFilter
-
-    const recetteUserFilter = this.user.recettes.filter((object => object.id !== recette.id))
-    this.user.recettes = recetteUserFilter
-
+    
+    // on filtre le tableau user.recettes pour la MAJ de User
+    
+    // MAJ User
     this.updateRecetteOfUser(this.user)
+    //on filtre le tableau recette par type
+    this.filterRecetteByType(recette.type)
 
   }
+
+  filterRecetteByType(type: string){
+    const recetteFilter = this.recettes.filter((object => object.type === type))
+    if (type === this.recetteType.sucrer) {
+      this.recetteSucrer = recetteFilter
+    }else{
+      this.recetteSaler = recetteFilter
+    }
+ }
+
 
   /**
    * ajout des recettes recupere via event (onRecette)
@@ -66,10 +82,20 @@ export class RecetteComponent implements OnInit {
    * @param recette
    */
   private create(recette: Recette): void {
+      recette.user_id = this.user.id
+      recette.quantites = []
+      recette.ustensiles = []
+      recette.etapes = []
+      console.log(recette);
+      
     this.recettesService.createRecette(recette).subscribe((recette) => {
+      if (recette.type === this.recetteType.saler) {
+        this.recetteSaler.push(recette)
+        
+      }else{
+        this.recetteSucrer.push(recette)
+      }
       this.recettes.push(recette);
-      this.user.recettes.unshift(recette)
-      this.userService.updateUser(this.user).subscribe()
     });
 
 
@@ -96,9 +122,12 @@ export class RecetteComponent implements OnInit {
   ngOnInit(): void {
 
     this.userService.getUser(+sessionStorage['id']).subscribe((user)=>{this.user = user})
-    this.recettesService.getRecettes().subscribe((recettes) => {
+    this.recettesService.recetteByUser(+sessionStorage['id']).subscribe((recettes) => {
       this.recettes = recettes;
+      this.filterRecetteByType(this.recetteType.saler)
+      this.filterRecetteByType(this.recetteType.sucrer)
     })
-  }
 
+
+  }
 }

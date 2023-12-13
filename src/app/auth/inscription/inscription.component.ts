@@ -18,7 +18,6 @@ export class InscriptionComponent {
     email: ['', [Validators.required,Validators.email]],
     password: ['', [Validators.required]],
     confirmPassword: ['', Validators.required],
-    recettes:[[]]
   },{
     validators: passwordMatchValidator
   }

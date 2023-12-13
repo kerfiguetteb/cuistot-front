@@ -15,9 +15,7 @@ export class AddRecetteComponent {
 
   recetteForm: FormGroup = this.formBuilder.group({
     nom: ['', [Validators.required]],
-    ustensiles:[[]],
-    quantites:[[]],
-    etapes:[[]]
+    type: ['', [Validators.required]],
   })
 
   @Output()
@@ -26,6 +24,8 @@ export class AddRecetteComponent {
   submitted: boolean = false;
 
   private addRecette(): void {  
+    console.log(this.recetteForm.value);
+    
     this.onRecette.emit(this.recetteForm.value)
     this.recetteForm.reset();
     this.submitted = false;

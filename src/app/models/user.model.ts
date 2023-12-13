@@ -5,7 +5,5 @@ export class User{
     fullName!:string ;
     password !: string ;
     email!: string ;
-    // roles!:string[];
-    recettes!: Recette[]
     cuistots!: User[]
     }
