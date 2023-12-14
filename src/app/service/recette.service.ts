@@ -41,7 +41,7 @@ export class RecetteService {
   }
 
   recetteByUser(id: number): Observable<Recette[]>{
-    return this.httpClient.get<Recette[]>(`${this.apiUrl}/recettes?user.id=${id}`)
+    return this.httpClient.get<Recette[]>(`${this.apiUrl}/recettes?user_id=${id}`)
   }
 
   

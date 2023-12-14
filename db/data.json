@@ -17,6 +17,42 @@
       "ustensiles": [],
       "etapes": [],
       "id": 2
+    },
+    {
+      "nom": "recette sucrer",
+      "type": "sucrée",
+      "user_id": 2,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [
+        {
+          "description": "fbfgb",
+          "id": 3
+        },
+        {
+          "description": "La créme:\nmelanger le tout\n",
+          "id": 4
+        }
+      ],
+      "id": 3
+    },
+    {
+      "nom": "recette salée",
+      "type": "salée",
+      "user_id": 2,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [
+        {
+          "description": "melanger le tout...",
+          "id": 1
+        },
+        {
+          "description": "secouer le tout..\n",
+          "id": 2
+        }
+      ],
+      "id": 4
     }
   ],
   "users": [
@@ -25,10 +61,60 @@
       "email": "out@man.fr",
       "password": "123",
       "id": 1
+    },
+    {
+      "fullName": "John Doe",
+      "email": "john@doe.fr",
+      "password": "123",
+      "id": 2
     }
   ],
-  "ingredientQuantites": [],
-  "ustensiles": [],
-  "ingredients": [],
-  "etapes": []
+  "ingredientQuantites": [
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "quantite": "100g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 1
+      },
+      "id": 2
+    }
+  ],
+  "ustensiles": [
+    {
+      "nom": "four",
+      "id": 1
+    }
+  ],
+  "ingredients": [
+    {
+      "nom": "sucre",
+      "id": 1
+    }
+  ],
+  "etapes": [
+    {
+      "description": "melanger le tout...",
+      "id": 1
+    },
+    {
+      "description": "secouer le tout..\n",
+      "id": 2
+    },
+    {
+      "description": "fbfgb",
+      "id": 3
+    },
+    {
+      "description": "La créme:\nmelanger le tout\n",
+      "id": 4
+    }
+  ]
 }

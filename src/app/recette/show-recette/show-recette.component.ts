@@ -164,8 +164,6 @@ export class ShowRecetteComponent implements OnInit {
 
   ngOnInit(): void {
     const type = this.route.snapshot.paramMap.get('type');
-    console.log(type);
-    
     const id = this.route.snapshot.paramMap.get('id');
     this.setSubscribe(type, id)
 

@@ -23,9 +23,7 @@ export class AddRecetteComponent {
 
   submitted: boolean = false;
 
-  private addRecette(): void {  
-    console.log(this.recetteForm.value);
-    
+  private addRecette(): void {      
     this.onRecette.emit(this.recetteForm.value)
     this.recetteForm.reset();
     this.submitted = false;

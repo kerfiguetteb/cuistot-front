@@ -44,11 +44,11 @@
   </ul>
   <div class="tab-content " id="pills-tabContent">
     <div class="tab-pane fade show active " id="pills-recette" role="tabpanel" aria-labelledby="pills-recette-tab" tabindex="0">
-      <app-table-recette-type [recettes]="recettes" (onRecette)="remove($event)"></app-table-recette-type>
+      <app-table-recette-type *ngIf="recettes" [recettes]="recettes" (onRecette)="remove($event)"></app-table-recette-type>
     </div>
 
     <div class="tab-pane fade " id="pills-sucrée" role="tabpanel" aria-labelledby="pills-sucrée-tab" tabindex="0">
-      <app-table-recette-type [recettes]="recetteSucrer" (onRecette)="remove($event)"></app-table-recette-type>
+      <app-table-recette-type  [recettes]="recetteSucrer" (onRecette)="remove($event)"></app-table-recette-type>
     </div>
     <div class="tab-pane fade" id="pills-salée" role="tabpanel" aria-labelledby="pills-salée-tab" tabindex="0">
       <app-table-recette-type [recettes]="recetteSaler" (onRecette)="remove($event)" ></app-table-recette-type>
@@ -57,4 +57,4 @@
   </div>
 
 
-
+</div>

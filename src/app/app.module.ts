@@ -62,7 +62,7 @@ import { TableRecetteTypeComponent } from './recette/table-recette-type/table-re
     NavbarVisiteurComponent,
     ProfileDetailComponent,
     MesRecettesComponent,
-    TableRecetteTypeComponent
+    TableRecetteTypeComponent,
   ],
 
   imports: [
