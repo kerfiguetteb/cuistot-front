@@ -1,0 +1,32 @@
+$primary: #c25700;
+$secondary: #4E0110;
+$warning:#efb224; 
+$gray: #454646;
+$info: #157a6e;
+
+.bi-eye-fill{
+    color: $info;
+    margin-right: 10px;
+}
+
+td{
+    padding: 25px 0 ;
+    font-size: larger;
+    font-weight: 400;
+    color: $gray;
+    text-align: center;
+}
+
+th{
+    padding: 25px;
+    font-size: large;
+    background: #c257002b !important;
+    text-align: center;
+}
+
+button{
+    border: none;
+    background-color: #fff;
+}
+
+

@@ -1,10 +1,95 @@
 {
   "recettes": [
     {
-      "nom": "Test",
-      "ustensiles": [],
+      "nom": "Tropezienne",
+      "type": "sucrée",
+      "user_id": 1,
       "quantites": [],
+      "ustensiles": [],
       "etapes": [],
+      "id": 1
+    },
+    {
+      "nom": "Brioche saléé",
+      "type": "salée",
+      "user_id": 1,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [],
+      "id": 2
+    },
+    {
+      "nom": "recette sucrer",
+      "type": "sucrée",
+      "user_id": 2,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [
+        {
+          "description": "fbfgb",
+          "id": 3
+        },
+        {
+          "description": "La créme:\nmelanger le tout\n",
+          "id": 4
+        }
+      ],
+      "id": 3
+    },
+    {
+      "nom": "recette salée",
+      "type": "salée",
+      "user_id": 2,
+      "quantites": [],
+      "ustensiles": [],
+      "etapes": [
+        {
+          "description": "melanger le tout...",
+          "id": 1
+        },
+        {
+          "description": "secouer le tout..\n",
+          "id": 2
+        }
+      ],
+      "id": 4
+    }
+  ],
+  "users": [
+    {
+      "fullName": "outman kerfi",
+      "email": "out@man.fr",
+      "password": "123",
+      "id": 1
+    },
+    {
+      "fullName": "John Doe",
+      "email": "john@doe.fr",
+      "password": "123",
+      "id": 2
+    }
+  ],
+  "ingredientQuantites": [
+    {
+      "quantite": "125g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 1
+      },
+      "id": 1
+    },
+    {
+      "quantite": "100g",
+      "ingredient": {
+        "nom": "sucre",
+        "id": 1
+      },
+      "id": 2
+    }
+  ],
+  "ustensiles": [
+    {
+      "nom": "four",
       "id": 1
     }
   ],
@@ -14,40 +99,22 @@
       "id": 1
     }
   ],
-  "ustensiles": [],
-  "ingredientQuantites": [
+  "etapes": [
     {
-      "quantite": "150g",
-      "ingredient": {
-        "nom": "sucre",
-        "id": 1
-      },
+      "description": "melanger le tout...",
       "id": 1
-    }
-  ],
-  "etapes": [],
-  "users": [
+    },
     {
-      "fullName": "John doe",
-      "email": "john@doe.fr",
-      "password": "123",
-      "recettes": [
-        {
-          "nom": "test",
-          "ustensiles": [],
-          "quantites": [],
-          "etapes": [],
-          "id": 4
-        },
-        {
-          "nom": "wxcw<cs<qc",
-          "ustensiles": [],
-          "quantites": [],
-          "etapes": [],
-          "id": 2
-        }
-      ],
-      "id": 1
+      "description": "secouer le tout..\n",
+      "id": 2
+    },
+    {
+      "description": "fbfgb",
+      "id": 3
+    },
+    {
+      "description": "La créme:\nmelanger le tout\n",
+      "id": 4
     }
   ]
 }

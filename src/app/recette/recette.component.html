@@ -1,42 +1,60 @@
-
-<div class="container">
-  <h1 class="custom-h1">mes recettes</h1>
+<div class="container mb-5">
+  <div>
+    <div class="row mt-5 ">
+      <div class="col-md-7 order-md-2">
+        <h2 class="fw-normal lh-1">Oh ouais, c'est si bon. <span class="text-body-secondary">Créez vos recettes</span></h2>
+        <p class="lead">Laissez libre cours à votre imagination, associez les ingrédients les plus surprenants, et ensemble, créons des recettes qui enchanteront les papilles et égayeront les repas au quotidien.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img src="../../assets/img/chef.svg" class="img-fluid" alt="...">
+      </div>
+    </div>
+  </div>
   <app-validation-message [message]="message"></app-validation-message>
   <div class="row d-flex justify-content-center">
     <div class="text-end mt-3">
-      <button (click)="toggle()"
-          class=" btn-custom">
-          Pour ajouter une recette cliqué ici 
-          <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
-          <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
-        </button>
+      <button (click)="toggle()" class=" btn-custom">
+        Pour ajouter une recette cliqué ici
+        <i *ngIf="!hidden" class="bi bi-caret-down-fill"></i>
+        <i *ngIf="hidden" class="bi bi-caret-right-fill"></i>
+      </button>
+    </div>
+
+    <div class="m-3 ">
+      <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
+    </div>
+  </div>
+  <hr>
+  <h1 class="custom-h1">mes recettes</h1>
+
+  <ul class="nav justify-content-center nav-pills mb-3" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="pills-recette-tab" data-bs-toggle="pill" data-bs-target="#pills-recette" type="button" role="tab" aria-controls="pills-recette" aria-selected="true">
+        tous
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button (click)="filterRecetteByType(recetteType.sucrer)" class="nav-link " id="pills-sucrée-tab" data-bs-toggle="pill" data-bs-target="#pills-sucrée" type="button" role="tab" aria-controls="pills-sucrée" aria-selected="true">
+        sucrée
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button (click)="filterRecetteByType(recetteType.sucrer)"  class="nav-link" id="pills-salée-tab" data-bs-toggle="pill" data-bs-target="#pills-salée" type="button" role="tab" aria-controls="pills-salée" aria-selected="false">salée</button>
+    </li>
+  </ul>
+  <div class="tab-content " id="pills-tabContent">
+    <div class="tab-pane fade show active " id="pills-recette" role="tabpanel" aria-labelledby="pills-recette-tab" tabindex="0">
+      <app-table-recette-type *ngIf="recettes" [recettes]="recettes" (onRecette)="remove($event)"></app-table-recette-type>
+    </div>
+
+    <div class="tab-pane fade " id="pills-sucrée" role="tabpanel" aria-labelledby="pills-sucrée-tab" tabindex="0">
+      <app-table-recette-type  [recettes]="recetteSucrer" (onRecette)="remove($event)"></app-table-recette-type>
+    </div>
+    <div class="tab-pane fade" id="pills-salée" role="tabpanel" aria-labelledby="pills-salée-tab" tabindex="0">
+      <app-table-recette-type [recettes]="recetteSaler" (onRecette)="remove($event)" ></app-table-recette-type>
+
+    </div>
   </div>
 
-  <div class="bloc-form">
-    <app-add-recette *ngIf="!hidden" (onRecette)="addRecette($event)"></app-add-recette>
-  </div>
 
-
-      <!-- <div *ngFor="let recette of recettes" class="card m-1 col-md-2 mt-5">
-        <app-card [detail]="'recette'" [object]="recette" (onRemoveObject)="remove($event)" ></app-card>
-      </div> -->
-  </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">nom</th>
-        <th scope="col">nb ingredient</th>
-        <th scope="col">action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let recette of user.recettes" class="tb-hover">
-        <td>{{recette.nom}}</td>
-        <td>{{recette.quantites.length}}</td>
-        <td>
-          <button routerLink="/show/recettes/{{recette.id}}"><i class="bi bi-eye-fill"></i></button>
-          <button (click)="remove(recette)"><i class="bi bi-trash3-fill text-danger"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+</div>

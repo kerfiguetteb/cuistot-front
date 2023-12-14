@@ -18,23 +18,17 @@ export class InscriptionComponent {
     email: ['', [Validators.required,Validators.email]],
     password: ['', [Validators.required]],
     confirmPassword: ['', Validators.required],
-    recettes:[[]]
   },{
     validators: passwordMatchValidator
   }
   )
 
-  @Input()
   message!: boolean
 
-  @Output()
-  onMessage: EventEmitter<boolean> = new EventEmitter()
-  
 
   add(){
     this.submitDetails()
     this.message = true
-    this.onMessage.emit(this.message)    
   }
 
   constructor( 
