@@ -7,7 +7,7 @@ import IngredientQuantite from '../models/ingredientQuantite.model';
   providedIn: 'root'
 })
 export class IngredientQuantiteService {
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private httpClient: HttpClient) { }
 

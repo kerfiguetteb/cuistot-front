@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-3 m-3">
+            <div class="activation">
+                <h1>Activation</h1>
+                <form action="" method="post" [formGroup]="activationForm" (submit)="addActivation()">
+
+                    <input type="text" name="code" formControlName="code" placeholder="123456"
+                        aria-label="activationNumber" aria-describedby="basic-addon1">
+                    <div class="d-grid gap-2 pt-3 ">
+                        <button type="submit" [disabled]="activationForm.invalid" class="btn-custom mb-5">Activer mon compter</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>

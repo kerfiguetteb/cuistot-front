@@ -14,7 +14,7 @@ export default class Recette {
     cuisson!: number
     repos!: number
     etapes!: Etape[]
-    user_id!: number
+    user!: User
     type!: string
 
 }

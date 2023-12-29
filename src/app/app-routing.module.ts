@@ -7,12 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { ConnexionComponent } from './auth/connexion/connexion.component';
 import { ProfileComponent } from './profile/profile.component';
 import { authGuard } from './guards/auth.guard';
+import { ActivationComponent } from './auth/activation/activation.component';
 const routes: Routes = [
 
   {path: 'recettes', component: RecetteComponent, canActivate:[authGuard]},
   {path: 'show/:type', component: ShowRecetteComponent,  canActivate:[authGuard]},
   {path: 'show/:type/:id', component: ShowRecetteComponent,  canActivate:[authGuard]},
   {path: 'home', component: HomeComponent},
+  {path: 'activation', component: ActivationComponent},
   {path: 'auth', component: AuthComponent},
   {path: 'connexion', component: ConnexionComponent},
   {path: 'profile', component: ProfileComponent, canActivate:[authGuard]},

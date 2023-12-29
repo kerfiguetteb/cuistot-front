@@ -1,0 +1,22 @@
+
+$primary: #c25700;
+$secondary: #4E0110;
+$info: #1c9496;
+$warning:#efb224; 
+$gray: #9b9e9c3d;
+
+.btn-custom{
+    background: $primary;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    padding: 8px;
+
+}
+
+.btn-custom:disabled{
+    background: #c2570082;
+    border-radius: 10px;
+    border: none;
+    color: #fff;
+}

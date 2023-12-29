@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { Auth } from 'src/app/models/auth';
 import { AuthService } from 'src/app/service/auth.service';
 
 @Component({
@@ -12,7 +13,7 @@ export class ConnexionComponent {
 
 
   loginForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
+    username: ['', [Validators.required, Validators.email]],
     password: ['', [Validators.required]]
   })
 
@@ -29,7 +30,7 @@ export class ConnexionComponent {
   ) { }
 
   get email() {
-    return this.loginForm.controls['email'];
+    return this.loginForm.controls['username'];
   }
 
   get password() {
@@ -41,25 +42,10 @@ export class ConnexionComponent {
   }
 
   private loginUser() {
-    const { email, password } = this.loginForm.value;
-    this.authService.getUserByEmail(email as string).subscribe(
-      response => {
-        if (response.length > 0 && response[0].password === password) {
-          sessionStorage.setItem('email', email as string);
-          sessionStorage.setItem('fullName', response[0].fullName)
-          sessionStorage.setItem('id', response[0].id.toString())
-          this.router.navigate(['profile'])
-        } else {
-          this.errorlogin = true
-          this.message = "email ou mot de passe incorrect";
-        }
-      },
-      error => {
-        this.error = true
-        this.message = "quelque chose c'est mal passer";
-      }
-
-    )
+    this.authService.connexion(this.loginForm.value as Auth).subscribe((response) => {
+      console.log(response);
+      
+    })
   }
 
 

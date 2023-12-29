@@ -5,12 +5,12 @@
     <h1>Inscription</h1>
     <p class="para-custom"> <strong>C'est gratuit</strong> (et ça ne mange pas de pain) </p>
     <div class="mb-3 mt-4">
-        <input type="text" name="fullName" formControlName="fullName" placeholder="ex: John Doe" aria-label="Username"
+        <input type="text" name="nom" formControlName="nom" placeholder="ex: John Doe" aria-label="Username"
             aria-describedby="basic-addon1">
 
         <small *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)">
             <div *ngIf="fullName.errors?.['required']">nom d'utilisateur requis!</div>
-            <div *ngIf="fullName.errors?.['fullName']">Entrez un nom d'utilisateur valide!</div>
+            <div *ngIf="fullName.errors?.['nom']">Entrez un nom d'utilisateur valide!</div>
         </small>
 
     </div>
@@ -25,10 +25,10 @@
 
     </div>
     <div class="mb-3">
-        <input type="password" name="password" formControlName="password" placeholder="Entrez votre mot de passe"
+        <input type="password"  formControlName="mdp" placeholder="Entrez votre mot de passe"
             id="exampleInputPassword1">
-        <small *ngIf="password.invalid && (password.dirty || password.touched)">
-            <div *ngIf="password.errors?.['required']">mot de passe requis!</div>
+        <small *ngIf="mdp.invalid && (mdp.dirty || mdp.touched)">
+            <div *ngIf="mdp.errors?.['required']">mot de passe requis!</div>
             <!-- <div *ngIf="password.errors?.['password']" >le mot de passe n'est pas valide!</div> -->
         </small>
     </div>
@@ -39,7 +39,7 @@
         <small *ngIf="confirmPassword.invalid && (confirmPassword.dirty || confirmPassword.touched)">
             <div *ngIf="confirmPassword.errors?.['required']">Confirmez le mot de passe </div>
         </small>
-        <small *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && password.valid ">
+        <small *ngIf="registerForm.errors?.['passwordMismatch'] && confirmPassword.valid && mdp.valid ">
             le mot de passe n'est pas identique
         </small>
     </div>

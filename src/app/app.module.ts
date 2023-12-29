@@ -32,6 +32,7 @@ import { NavbarVisiteurComponent } from './commons/header/navbar-visiteur/navbar
 import { ProfileDetailComponent } from './profile/profile-detail/profile-detail.component';
 import { MesRecettesComponent } from './profile/mes-recettes/mes-recettes.component';
 import { TableRecetteTypeComponent } from './recette/table-recette-type/table-recette-type.component';
+import { ActivationComponent } from './auth/activation/activation.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { TableRecetteTypeComponent } from './recette/table-recette-type/table-re
     ProfileDetailComponent,
     MesRecettesComponent,
     TableRecetteTypeComponent,
+    ActivationComponent,
   ],
 
   imports: [

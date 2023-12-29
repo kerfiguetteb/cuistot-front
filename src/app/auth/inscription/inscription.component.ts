@@ -14,9 +14,9 @@ import { passwordMatchValidator } from 'src/app/shared/password-match.directive'
 export class InscriptionComponent {
   
   registerForm = this.fb.group({
-    fullName: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
+    nom: ['', [Validators.required, Validators.pattern(/^[a-zA-Z]+(?: [a-zA-Z]+)*$/)]],
     email: ['', [Validators.required,Validators.email]],
-    password: ['', [Validators.required]],
+    mdp: ['', [Validators.required]],
     confirmPassword: ['', Validators.required],
   },{
     validators: passwordMatchValidator
@@ -38,15 +38,15 @@ export class InscriptionComponent {
     ){}
 
   get fullName(){
-    return this.registerForm.controls['fullName'];
+    return this.registerForm.controls['nom'];
   }
 
   get email(){
     return this.registerForm.controls['email'];
   }
 
-  get password(){
-    return this.registerForm.controls['password'];
+  get mdp(){
+    return this.registerForm.controls['mdp'];
   }
 
   get confirmPassword() {

@@ -32,11 +32,11 @@
                     </div>
                 </div>
                 <div class="mb-3 mt-3">
-                    <input type="email" name="email" id="exampleInputEmail1" placeholder="Email" formControlName="email"
+                    <input type="email" name="username" id="exampleInputEmail1" placeholder="Email" formControlName="username"
                         aria-describedby="emailHelp">
                     <small *ngIf="email.invalid && (email.dirty || email.touched)">
                         <div *ngIf="email.errors?.['required']">email requis!</div>
-                        <div *ngIf="email.errors?.['email']">l'email n'est pas valide!</div>
+                        <div *ngIf="email.errors?.['username']">l'email n'est pas valide!</div>
                     </small>
                 </div>
                 <div class="mb-3">

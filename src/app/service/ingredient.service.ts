@@ -8,7 +8,7 @@ import Ingredient from '../models/ingredient.model';
 })
 export class IngredientService {
 
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private httpClient: HttpClient) { }
 

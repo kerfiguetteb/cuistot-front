@@ -27,8 +27,8 @@ export class RecetteComponent implements OnInit {
   hidden: boolean = true;
 
   recetteType = {
-    sucrer : 'sucrée',
-    saler: 'salée'
+    sucrer : 'SUCRER',
+    saler: 'SALER'
   }
 
   
@@ -82,11 +82,10 @@ export class RecetteComponent implements OnInit {
    * @param recette
    */
   private create(recette: Recette): void {
-      recette.user_id = this.user.id
-      recette.quantites = []
-      recette.ustensiles = []
-      recette.etapes = []
-      console.log(recette);
+
+      recette.user = this.user 
+      this.recettes.push(recette);
+      console.log(this.recettes);
       
     this.recettesService.createRecette(recette).subscribe((recette) => {
       if (recette.type === this.recetteType.saler) {
@@ -95,7 +94,6 @@ export class RecetteComponent implements OnInit {
       }else{
         this.recetteSucrer.push(recette)
       }
-      this.recettes.push(recette);
     });
 
 
@@ -121,9 +119,13 @@ export class RecetteComponent implements OnInit {
 
   ngOnInit(): void {
 
-    this.userService.getUser(+sessionStorage['id']).subscribe((user)=>{this.user = user})
+    this.userService.getUser(+sessionStorage['id']).subscribe((user)=>{
+      this.user = user
+    })
+    
     this.recettesService.recetteByUser(+sessionStorage['id']).subscribe((recettes) => {
       this.recettes = recettes;
+      
       this.filterRecetteByType(this.recetteType.saler)
       this.filterRecetteByType(this.recetteType.sucrer)
     })

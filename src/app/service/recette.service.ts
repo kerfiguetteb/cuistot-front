@@ -8,7 +8,7 @@ import Recette from '../models/recette.model';
 })
 export class RecetteService {
 
-  private apiUrl = 'http://localhost:3000';
+  private apiUrl = 'http://localhost:8080';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -41,7 +41,7 @@ export class RecetteService {
   }
 
   recetteByUser(id: number): Observable<Recette[]>{
-    return this.httpClient.get<Recette[]>(`${this.apiUrl}/recettes?user_id=${id}`)
+    return this.httpClient.get<Recette[]>(`${this.apiUrl}/recettes/find-by-user-${id}`)
   }
 
   
